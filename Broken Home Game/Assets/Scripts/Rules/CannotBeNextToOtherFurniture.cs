@@ -13,12 +13,9 @@ public class CannotBeNextToOtherFurniture : FurnitureRule
         {
             if (colliders[i].GetInstanceID() != checkingObject.GetComponentInChildren<Collider>().GetInstanceID())
             {
-                checkingObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_Color", Color.red);   // TEMP
                 return false;
             }
         }
-
-        checkingObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_Color", Color.white); // TEMP
 
         return true;
     }

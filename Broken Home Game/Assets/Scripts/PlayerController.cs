@@ -35,5 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
         }
+
+
     }
 }

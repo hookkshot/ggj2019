@@ -3,8 +3,8 @@
 [CreateAssetMenu(menuName = "Furniture Rules/CannotBeNextToOtherFurniture")]
 public class CannotBeNextToOtherFurniture : FurnitureRule
 {
-    [SerializeField] private LayerMask _checkLayers;
-    [SerializeField] private float _checkRadius = 1.5f;
+    [SerializeField] LayerMask _checkLayers;
+    [SerializeField] float _checkRadius = 1.5f;
 
     public override bool Passes(MeetsFengShuiScript checkingObject)
     {

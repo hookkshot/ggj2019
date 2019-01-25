@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
         {
             MoveToCell(xCell, yCell - 1);
         }
+
+
     }
 
     private void MoveToCell(int x, int y)

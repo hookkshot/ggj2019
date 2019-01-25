@@ -7,7 +7,7 @@ public class InteractableFurnitureScript : MonoBehaviour
 {
     void Place(Tilemap map, Vector3Int cell)
     {
-        gameObject.transform.parent = map;
+        gameObject.transform.parent = map.transform;
         gameObject.transform.localPosition = map.CellToLocal(cell);
 
         var zoneScript = gameObject.GetComponentInParent<ZoneScript>();

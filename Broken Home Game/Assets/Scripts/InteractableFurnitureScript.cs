@@ -18,7 +18,7 @@ public class InteractableFurnitureScript : MonoBehaviour
     {
         var zoneScript = gameObject.GetComponentInParent<ZoneScript>();
         
-        gameObject.transform.parent = player.gameObject;
+        gameObject.transform.parent = player.transform;
         gameObject.transform.localPosition = new Vector3(0, 0, 1);
         gameObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 

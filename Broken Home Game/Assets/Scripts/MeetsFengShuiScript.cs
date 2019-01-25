@@ -14,6 +14,6 @@ public class MeetsFengShuiScript : MonoBehaviour
     }
 
     public void UpdateFengShui() { 
-        hasFengShui = rules.All(f => f.Passes());
+        hasFengShui = rules.All(f => f.Passes(this));
     }
 }

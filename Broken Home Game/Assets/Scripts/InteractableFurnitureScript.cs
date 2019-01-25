@@ -27,6 +27,6 @@ public class InteractableFurnitureScript : MonoBehaviour
 
     void Rotate()
     {
-        gameObject.transform.localRotation *= Quaternion.AngleAxis(90, new Vector3(0, 0, 1));
+        gameObject.transform.localRotation *= Quaternion.AngleAxis(90, gameObject.transform.up);
     }
 }

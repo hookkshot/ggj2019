@@ -26,4 +26,23 @@ static class ExtensionMethods
 
         return pos;
     }
+
+    public static Rotation RotateLeft(this Rotation rotation)
+    {
+        switch (rotation)
+        {
+            case Rotation.NORTH: return Rotation.WEST;
+            case Rotation.EAST: return Rotation.NORTH;
+            case Rotation.SOUTH: return Rotation.EAST;
+            case Rotation.WEST: return Rotation.SOUTH;
+        }
+
+        return Rotation.ASKEW;
+    }
+
+    public static Rotation RotateRight(this Rotation rotation)
+    {
+
+        return rotation.RotateLeft().RotateLeft().RotateLeft();
+    }
 }

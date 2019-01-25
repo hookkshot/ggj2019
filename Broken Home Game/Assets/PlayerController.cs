@@ -5,21 +5,15 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
-    private float x = 1;
-    private float y = 0.5f;
-
-    private int xCell = 0;
-    private int yCell = 0;
-
     [SerializeField]
     private Tilemap tilemap;
 
     private BoundsInt currentBounds;
+    private TileObject tileObject;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        tileObject = gameObject.GetComponentInChildren<TileObject>();
     }
 
     // Update is called once per frame
@@ -27,28 +21,19 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            MoveToCell(xCell + 1, yCell);
+            tileObject.RotateRight();
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            MoveToCell(xCell - 1, yCell);
+            tileObject.RotateLeft();
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            MoveToCell(xCell, yCell + 1);
+            tileObject.Step(tilemap, tileObject.GetRotation());
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            MoveToCell(xCell, yCell - 1);
+            tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
         }
-    }
-
-    private void MoveToCell(int x, int y)
-    {
-        var tile = tilemap.GetTile(new Vector3Int(x, y, 0));
-        if (!tile) return;
-        xCell = x;
-        yCell = y;
-        transform.position = tilemap.CellToWorld(new Vector3Int(x, y, 0));
     }
 }

@@ -6,18 +6,26 @@ using UnityEngine.Tilemaps;
 public class TileObject : MonoBehaviour
 {
     Vector2Int cell = new Vector2Int(0, 0);
+    Rotation rotation = Rotation.NORTH;
 
     public Vector2Int GetCell() { return cell; }
+    public Rotation GetRotation() { return rotation; }
 
-    void MoveToCell(Tilemap tilemap, Vector2Int newCell)
+    [SerializeField]
+    private Transform actualFuckingTransform;
+
+    public void MoveToCell(Tilemap tilemap, Vector2Int newCell)
     {
-        transform.parent = tilemap.transform;
-        transform.position = tilemap.CellToLocal(new Vector3Int(newCell.x, newCell.y, 0));
+        transform.position = tilemap.CellToWorld(new Vector3Int(newCell.x, newCell.y, 0));
         cell = newCell;
     }
 
-    Rotation rotation = Rotation.ASKEW;
-    void Face(Rotation newRotation)
+    public void Step(Tilemap tilemap, Rotation direction)
+    {
+        MoveToCell(tilemap, cell.Step(direction));
+    }
+
+    public void Face(Rotation newRotation)
     {
         rotation = newRotation;
 
@@ -29,5 +37,15 @@ public class TileObject : MonoBehaviour
             case Rotation.WEST: transform.localRotation = Quaternion.AngleAxis(270, transform.up); break;
             default: break;
         }
+    }
+
+    public void RotateLeft()
+    {
+        Face(rotation.RotateLeft());
+    }
+
+    public void RotateRight()
+    {
+        Face(rotation.RotateRight());
     }
 }

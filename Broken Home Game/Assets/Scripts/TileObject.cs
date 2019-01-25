@@ -11,12 +11,9 @@ public class TileObject : MonoBehaviour
     public Vector2Int GetCell() { return cell; }
     public Rotation GetRotation() { return rotation; }
 
-    [SerializeField]
-    private Transform actualFuckingTransform;
-
     public void MoveToCell(Tilemap tilemap, Vector2Int newCell)
     {
-        transform.position = tilemap.CellToWorld(new Vector3Int(newCell.x, newCell.y, 0));
+        transform.localPosition = tilemap.CellToLocal(new Vector3Int(newCell.x, newCell.y, -1));
         cell = newCell;
     }
 
@@ -27,14 +24,16 @@ public class TileObject : MonoBehaviour
 
     public void Face(Rotation newRotation)
     {
+        var rotationOffset = Quaternion.Euler(60, 0, 45);
+
         rotation = newRotation;
 
         switch(rotation)
         {
-            case Rotation.NORTH: transform.localRotation = Quaternion.AngleAxis(0, transform.up); break;
-            case Rotation.EAST: transform.localRotation = Quaternion.AngleAxis(90, transform.up); break;
-            case Rotation.SOUTH: transform.localRotation = Quaternion.AngleAxis(180, transform.up); break;
-            case Rotation.WEST: transform.localRotation = Quaternion.AngleAxis(270, transform.up); break;
+            case Rotation.NORTH: transform.localRotation = rotationOffset * Quaternion.AngleAxis(0, Vector3.forward); break;
+            case Rotation.EAST: transform.localRotation = rotationOffset * Quaternion.AngleAxis(90, Vector3.forward); break;
+            case Rotation.SOUTH: transform.localRotation = rotationOffset * Quaternion.AngleAxis(180, Vector3.forward); break;
+            case Rotation.WEST: transform.localRotation = rotationOffset * Quaternion.AngleAxis(270, Vector3.forward); break;
             default: break;
         }
     }

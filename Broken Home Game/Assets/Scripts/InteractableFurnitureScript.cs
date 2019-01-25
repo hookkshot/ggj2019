@@ -14,7 +14,7 @@ public class InteractableFurnitureScript : MonoBehaviour
         zoneScript.OnUpdateLayout();
     }
 
-    void Pickup(PlayerMovement player)
+    void Pickup(PlayerController player)
     {
         var zoneScript = gameObject.GetComponentInParent<ZoneScript>();
         

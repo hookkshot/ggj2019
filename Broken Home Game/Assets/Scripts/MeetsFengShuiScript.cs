@@ -3,16 +3,17 @@ using System.Linq;
 
 public class MeetsFengShuiScript : MonoBehaviour
 {
+    [SerializeField()]
     FurnitureRule[] rules;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        rules = GetComponentsInChildren<FurnitureRule>();
-    }
+    bool hasFengShui = false;
 
     public bool HasFengShui()
     {
-        return rules.All(f => f.Passes());
+        return hasFengShui;
+    }
+
+    public void UpdateFengShui() { 
+        hasFengShui = rules.All(f => f.Passes());
     }
 }

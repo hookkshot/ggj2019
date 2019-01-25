@@ -2,5 +2,5 @@
 
 public abstract class FurnitureRule : ScriptableObject
 {
-    public abstract bool Passes();
+    public abstract bool Passes(MeetsFengShuiScript checkingObject);
 }

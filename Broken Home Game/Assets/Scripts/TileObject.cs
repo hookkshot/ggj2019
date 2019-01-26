@@ -13,7 +13,10 @@ public class TileObject : MonoBehaviour
 
     public void MoveToCell(Tilemap tilemap, Vector2Int newCell)
     {
-        transform.localPosition = tilemap.CellToLocal(new Vector3Int(newCell.x, newCell.y, -1));
+        var newPosition = tilemap.CellToWorld(new Vector3Int(newCell.x, newCell.y, -1));
+        if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y))) { return; }
+
+        transform.position = newPosition;
         cell = newCell;
     }
 

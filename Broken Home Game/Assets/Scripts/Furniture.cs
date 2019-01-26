@@ -24,8 +24,8 @@ public class Furniture : MonoBehaviour
 
             var cell = tilemap.SnapToClosestCell(transform);
             if (TileObject) {
-                //TileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y));
-                //TileObject.Face(TileObject.GetRotation());
+                TileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y));
+                TileObject.Face(TileObject.GetRotation());
             }
         }
     }

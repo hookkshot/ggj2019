@@ -54,8 +54,15 @@ public class PlayerInventory : MonoBehaviour
         Inventory.RemoveAt(0);
         Inventory.Add(first);
 
+        foreach (GameObject o in Inventory)
+        {
+            if (!o) { continue; }
+            o.SetActive(false);
+        }
+
         if (HandItem())
         {
+            HandItem().SetActive(true);
             handPos = HandItem().transform.localPosition;
         }
     }

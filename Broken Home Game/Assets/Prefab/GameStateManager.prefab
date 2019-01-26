@@ -49,8 +49,11 @@ MonoBehaviour:
   - Kitchen
   playerControllerPrefab: {fileID: 5469839437926428336, guid: 336538d0fa6253d4f845347c22dccd8e,
     type: 3}
-  FirstScene: Lounge
+  FirstScene: Hallway
   FirstDoor: Entrance
+  FurniturePrefabs:
+  - {fileID: 7927960967899577180, guid: f09f3c4607a0d1b4c870fc06cb21887b, type: 3}
+  - {fileID: 3212104477784631027, guid: 6467e4b71dd5a7c498157f256d2ca145, type: 3}
 --- !u!1001 &2186563925634340057
 PrefabInstance:
   m_ObjectHideFlags: 0

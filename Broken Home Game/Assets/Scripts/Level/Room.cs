@@ -15,15 +15,19 @@ public class Room : MonoBehaviour
     private PlayerController playerController;
     private PlayerInventory playerInventory;
 
-    public void Setup(PlayerController playerController, RoomState state)
+    private void Awake()
     {
         zones = GetComponentsInChildren<ZoneScript>();
+    }
+
+    public void Setup(PlayerController playerController, RoomState state)
+    {
         this.playerController = playerController;
         playerInventory = playerController.GetComponent<PlayerInventory>();
 
         if(state != null)
         {
-
+            ToState(state);
         }
     }
 
@@ -72,9 +76,8 @@ public class Room : MonoBehaviour
 
     public void OnZoneUpdate()
     {
+        if (!playerInventory || zones == null) return;
         bool hasFengShui = true;
-
-        if (zones == null) { return; }
 
         foreach (var zone in zones)
         {

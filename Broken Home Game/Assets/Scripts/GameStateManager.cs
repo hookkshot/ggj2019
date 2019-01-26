@@ -92,7 +92,7 @@ public class GameStateManager : MonoBehaviour
 
         currentRoom = FindObjectOfType<Room>();
 
-        var roomState = gameState.Rooms[currentRoom.SceneName];
+        var roomState = gameState.Rooms.ContainsKey(currentRoom.SceneName) ? gameState.Rooms[currentRoom.SceneName] : null;
         
         var door = currentRoom.GetDoor(doorName);
         var spawnPoint = door?.transform.position ?? Vector3.zero;

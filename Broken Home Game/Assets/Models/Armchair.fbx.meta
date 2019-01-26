@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: bef42df83984a8045895b7724d226c39
+guid: 527f5c491c664d740a5228b8e28051a2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: Material.005
+    2100002: grey
+    2100004: dark grey
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.004
+    4300000: armchair
   externalObjects: {}
   materials:
     importMaterials: 1

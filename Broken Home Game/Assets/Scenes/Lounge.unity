@@ -112,6 +112,203 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &165208937
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5431907974575968277, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_Name
+      value: HallDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: Name
+      value: HallDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: SceneConnection
+      value: Hallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: DoorConnection
+      value: LoungeDoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22419effe33e771428a2dd4faf3846a6, type: 3}
+--- !u!114 &165208938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 165208937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f4a73f021bfe542950a644507b4623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &420734567
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5431907974575968277, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_Name
+      value: KitchenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968275, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: Name
+      value: Kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: SceneConnection
+      value: Kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: DoorConnection
+      value: Lounge
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: Rotation
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22419effe33e771428a2dd4faf3846a6, type: 3}
+--- !u!114 &420734568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 420734567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f4a73f021bfe542950a644507b4623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &479731071
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,73 +436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Lounge
   doors:
-  - {fileID: 1041428091}
-  - {fileID: 639026022}
+  - {fileID: 165208938}
+  - {fileID: 420734568}
   Tilemap: {fileID: 1890964535}
---- !u!1 &639026021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 639026023}
-  - component: {fileID: 639026022}
-  - component: {fileID: 639026024}
-  m_Layer: 10
-  m_Name: KitchenDoor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &639026022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639026021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f4a73f021bfe542950a644507b4623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Kitchen
-  SceneConnection: Kitchen
-  DoorConnection: Lounge
-  Rotation: 3
---- !u!4 &639026023
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639026021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.25, z: 0.45744112}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &639026024
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639026021}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!1 &704141433
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,70 +483,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1041428090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1041428092}
-  - component: {fileID: 1041428091}
-  - component: {fileID: 1041428093}
-  m_Layer: 10
-  m_Name: HallDoor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1041428091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041428090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f4a73f021bfe542950a644507b4623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: HallDoor
-  SceneConnection: Hallway
-  DoorConnection: LoungeDoor
-  Rotation: 1
---- !u!4 &1041428092
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041428090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -0.75, z: 0.45744112}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1041428093
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041428090}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.2
 --- !u!1 &1890964532
 GameObject:
   m_ObjectHideFlags: 0

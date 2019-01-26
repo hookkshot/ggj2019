@@ -4,7 +4,7 @@
 public class SetSortingLayer : MonoBehaviour
 {
     [SerializeField] Renderer[] _myRenderers;
-    [SerializeField] string _mySortingLayer;
+    [SerializeField] string _mySortingLayer = "Default";
     [SerializeField] int _mySortingOrderInLayer;
 
     // Use this for initialization

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
+[RequireComponent(typeof(SetSortingLayer))]
 public class TileObject : MonoBehaviour
 {
     Vector2Int cell;

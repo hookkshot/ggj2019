@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,7 +26,13 @@ public class GameStateManager : MonoBehaviour
     private string FirstDoor;
 
     [SerializeField]
-    public  Furniture[] FurniturePrefabs;
+    public Furniture[] FurniturePrefabs;
+
+    [SerializeField]
+    private GameObject GameUi;
+
+    [SerializeField]
+    private TextMeshProUGUI roomText;
 
 
     private bool sceneHasLoaded;
@@ -56,7 +63,14 @@ public class GameStateManager : MonoBehaviour
 
     public void StartGame()
     {
+        GameUi.SetActive(true);
         MoveToLevel(FirstScene, FirstDoor);
+    }
+
+    public void EndGame()
+    {
+        GameUi.SetActive(false);
+        SceneManager.LoadScene("Menu");
     }
 
     public void MoveToLevel(string levelName, string doorName)
@@ -91,7 +105,10 @@ public class GameStateManager : MonoBehaviour
         }
 
         currentRoom = FindObjectOfType<Room>();
+        //Update UI
+        roomText.text = currentRoom.SceneName;
 
+        //Update State
         var roomState = gameState.Rooms.ContainsKey(currentRoom.SceneName) ? gameState.Rooms[currentRoom.SceneName] : null;
         
         var door = currentRoom.GetDoor(doorName);
@@ -103,3 +120,5 @@ public class GameStateManager : MonoBehaviour
         currentRoom.Setup(playerController, roomState);
     }
 }
+
+

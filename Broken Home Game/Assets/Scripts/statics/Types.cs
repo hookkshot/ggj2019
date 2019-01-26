@@ -49,5 +49,6 @@ static class ExtensionMethods
     {
         Vector3Int gridPosition = tilemap.layoutGrid.WorldToCell(transformToSnap.position);
         transformToSnap.position = tilemap.layoutGrid.GetCellCenterWorld(gridPosition);
+        return gridPosition;
     }
 }

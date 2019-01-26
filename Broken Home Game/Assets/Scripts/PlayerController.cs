@@ -31,21 +31,40 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        var inventory = GetComponent<PlayerInventory>();
+        var handItem = inventory.HandItem();
+
+        if (handItem)
         {
-            tileObject.RotateRight();
+            var inventoryTileObject = handItem.GetComponent<TileObject>();
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                inventoryTileObject.RotateRight();
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                inventoryTileObject.RotateLeft();
+            }
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else
         {
-            tileObject.RotateLeft();
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            tileObject.Step(tilemap, tileObject.GetRotation());
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                tileObject.RotateRight();
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                tileObject.RotateLeft();
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                tileObject.Step(tilemap, tileObject.GetRotation());
+            }
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

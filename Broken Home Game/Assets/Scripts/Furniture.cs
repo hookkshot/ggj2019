@@ -21,7 +21,11 @@ public class Furniture : MonoBehaviour
         if (snapToGrid)
         {
             Tilemap tilemap = FindObjectOfType<Tilemap>();
-            tilemap.SnapToClosestCell(this.transform);
+            var cell = tilemap.SnapToClosestCell(this.transform);
+            if (TileObject) {
+                TileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y));
+                TileObject.Face(TileObject.GetRotation());
+            }
         }
     }
 

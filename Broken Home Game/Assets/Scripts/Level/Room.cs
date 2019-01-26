@@ -15,6 +15,8 @@ public class Room : MonoBehaviour
     private PlayerController playerController;
     private PlayerInventory playerInventory;
 
+    public bool IsFengShui { get; private set; }
+
     private void Awake()
     {
         zones = GetComponentsInChildren<ZoneScript>();
@@ -27,7 +29,7 @@ public class Room : MonoBehaviour
 
         if(state != null)
         {
-            ToState(state);
+            FromState(state);
 
         }
 
@@ -37,7 +39,7 @@ public class Room : MonoBehaviour
         }
     }
 
-    public void ToState(RoomState state)
+    public void FromState(RoomState state)
     {
         foreach (var furniture in FindObjectsOfType<Furniture>().Where(f => f.GetComponent<InteractableFurniture>() != null))
         {
@@ -72,6 +74,8 @@ public class Room : MonoBehaviour
             }
         }
 
+        state.Completed = IsFengShui;
+
         return state;
     }
 
@@ -83,13 +87,13 @@ public class Room : MonoBehaviour
     public void OnZoneUpdate()
     {
         if (!playerInventory || zones == null) return;
-        bool hasFengShui = true;
+        IsFengShui = true;
 
         foreach (var zone in zones)
         {
-            hasFengShui &= zone.HasFengShui;
+            IsFengShui &= zone.HasFengShui;
         }
 
-        hasFengShui &= playerInventory.IsInventoryEmpty();
+        IsFengShui &= playerInventory.IsInventoryEmpty();
     }
 }

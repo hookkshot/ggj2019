@@ -7,6 +7,6 @@ public static class ZOrdering
         unorderedObject.localPosition = new Vector3(
             unorderedObject.localPosition.x,
             unorderedObject.localPosition.y,
-            unorderedObject.localPosition.y * 2f);
+            -2 + unorderedObject.localPosition.y * 2f);
     }
 }

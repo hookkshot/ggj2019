@@ -65,6 +65,15 @@ public class PlayerController : MonoBehaviour
             {
                 tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
             }
+
+            var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
+            var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y, 0));
+
+            foreach (GameObject o in inventory.Inventory)
+            {
+                if (!o) { continue; }
+                o.transform.position = worldPoint;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -82,7 +91,7 @@ public class PlayerController : MonoBehaviour
     {
         var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
         var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y, 0));
-var inventory = GetComponent<PlayerInventory>();
+        var inventory = GetComponent<PlayerInventory>();
 
         var handItem = inventory.HandItem();
         if (handItem)

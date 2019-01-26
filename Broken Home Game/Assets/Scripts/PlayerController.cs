@@ -81,8 +81,8 @@ public class PlayerController : MonoBehaviour
     private void Interact()
     {
         var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
-        var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y,0));
-        var inventory = GetComponent<PlayerInventory>();
+        var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y, 0));
+var inventory = GetComponent<PlayerInventory>();
 
         var handItem = inventory.HandItem();
         if (handItem)

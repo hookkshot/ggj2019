@@ -47,6 +47,7 @@ public class GameStateManager : MonoBehaviour
         _instance = this;
 
         gameState = new GameState();
+        GameUi.SetActive(false);
 
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
     }

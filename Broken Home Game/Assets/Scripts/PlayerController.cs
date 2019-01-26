@@ -13,6 +13,14 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (tilemap != null)
+            Setup(tilemap);
+        
+    }
+
+    public void Setup(Tilemap tilemap)
+    {
+        this.tilemap = tilemap;
         tileObject = gameObject.GetComponentInChildren<TileObject>();
         tileObject.Face(tileObject.GetRotation());
         tilemap.SnapToClosestCell(transform);

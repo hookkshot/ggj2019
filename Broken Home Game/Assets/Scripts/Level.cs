@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Tilemaps;
 
 public class Level : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Level : MonoBehaviour
 
     [SerializeField]
     private LevelDoor[] doors;
+
+    public Tilemap Tilemap;
 
     public LevelDoor GetDoor(string name)
     {

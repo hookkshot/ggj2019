@@ -621,5 +621,21 @@ PrefabInstance:
       propertyPath: gameLevels.Array.data[1]
       value: Kitchen
       objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: FirstScene
+      value: Lounge
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: FirstDoor
+      value: Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: playerControllerPrefab
+      value: 
+      objectReference: {fileID: 5735403448895237076, guid: 85462b1c6e0f71645b3f83693550f6da,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}

@@ -40,7 +40,7 @@ public class GameStateManager : MonoBehaviour
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
-        throw new System.NotImplementedException();
+        sceneHasLoaded = true;
     }
 
     public void StartGame()
@@ -69,5 +69,6 @@ public class GameStateManager : MonoBehaviour
         var spawnPoint = currentLevel.GetDoor(doorName)?.transform.position ?? Vector3.zero;
 
         playerController = Instantiate(playerControllerPrefab, spawnPoint, Quaternion.identity);
+        playerController.Setup(currentLevel.Tilemap);
     }
 }

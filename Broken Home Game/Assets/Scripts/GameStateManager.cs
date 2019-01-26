@@ -74,6 +74,20 @@ public class GameStateManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void CheckWinConditions()
+    {
+        var scenes = SceneManager.sceneCountInBuildSettings - 2;
+        var completedGameStates = gameState.Rooms.Where(r => r.Value.Completed);
+
+        if(completedGameStates.Count() > scenes-1)
+        {
+            if (currentRoom.IsFengShui)
+            {
+                EndGame();
+            }
+        }
+    }
+
     public void MoveToLevel(string levelName, string doorName)
     {
         if(currentRoom != null)

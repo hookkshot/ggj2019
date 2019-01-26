@@ -10,6 +10,7 @@ public class GameState
 public class RoomState
 {
     public List<FurnitureState> Furnitures = new List<FurnitureState>();
+    public bool Completed;
 }
 
 public class FurnitureState

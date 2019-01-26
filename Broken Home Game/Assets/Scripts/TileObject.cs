@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 public class TileObject : MonoBehaviour
 {
     Vector2Int cell;
+
+    [SerializeField]
     Rotation rotation = Rotation.NORTH;
 
     public Vector2Int GetCell() { return cell; }

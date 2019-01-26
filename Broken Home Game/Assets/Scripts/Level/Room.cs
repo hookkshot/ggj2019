@@ -15,11 +15,58 @@ public class Room : MonoBehaviour
     private PlayerController playerController;
     private PlayerInventory playerInventory;
 
-    public void Setup(PlayerController playerController)
+    private void Awake()
     {
         zones = GetComponentsInChildren<ZoneScript>();
+    }
+
+    public void Setup(PlayerController playerController, RoomState state)
+    {
         this.playerController = playerController;
         playerInventory = playerController.GetComponent<PlayerInventory>();
+
+        if(state != null)
+        {
+            ToState(state);
+        }
+    }
+
+    public void ToState(RoomState state)
+    {
+        foreach (var furniture in FindObjectsOfType<Furniture>())
+        {
+            Destroy(furniture.gameObject);
+        }
+
+        foreach (var furnitureState  in state.Furnitures)
+        {
+            var furniture = Instantiate(GameStateManager.Instance.GetFurniture(furnitureState.Name));
+
+            furniture.TileObject.MoveToCell(Tilemap, furnitureState.Cell);
+            furniture.TileObject.Face(furnitureState.Rotation);
+        }
+    }
+
+    public RoomState ToState()
+    {
+        var state = new RoomState();
+
+        foreach (var zone in zones)
+        {
+
+            foreach (var furniture in zone.Furniture.Where(f => f.GetComponent<InteractableFurnitureScript>() != null))
+            {
+                var furnitureState = new FurnitureState();
+
+                furnitureState.Rotation = furniture.TileObject.GetRotation();
+                furnitureState.Cell = furniture.TileObject.GetCell();
+                furnitureState.Name = furniture.TypeName;
+
+                state.Furnitures.Add(furnitureState);
+            }
+        }
+
+        return state;
     }
 
     public LevelDoor GetDoor(string name)
@@ -29,9 +76,8 @@ public class Room : MonoBehaviour
 
     public void OnZoneUpdate()
     {
+        if (!playerInventory || zones == null) return;
         bool hasFengShui = true;
-
-        if (zones == null) { return; }
 
         foreach (var zone in zones)
         {
@@ -40,6 +86,4 @@ public class Room : MonoBehaviour
 
         hasFengShui &= playerInventory.IsInventoryEmpty();
     }
-
-
 }

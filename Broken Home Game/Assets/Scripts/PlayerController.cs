@@ -12,9 +12,7 @@ public class PlayerController : MonoBehaviour
     private TileObject tileObject;
 
     void Start()
-    {
-        if (tilemap != null) { Setup(tilemap, Rotation.NORTH); }
-        
+    {        
     }
 
     public void Setup(Tilemap tilemap, Rotation rotation)
@@ -24,7 +22,6 @@ public class PlayerController : MonoBehaviour
         tileObject.Face(rotation);
 
         var cell = tilemap.SnapToClosestCell(transform);
-        Debug.Log(cell + ", " + transform);
         tileObject.MoveToCell(tilemap, new Vector2Int(cell.x,cell.y).Step(rotation));
     }
 

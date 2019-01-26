@@ -9,13 +9,14 @@ public class Furniture : MonoBehaviour
     [SerializeField] string[] tags;
 
     [SerializeField] bool snapToGrid = true;
+    public string TypeName;
 
     bool hasFengShui = false;
 
     public TileObject TileObject { get; private set; } = null;
     public string[] FurnitureTags { get => tags; }
 
-    private void Start()
+    private void Awake()
     {
         TileObject = GetComponent<TileObject>();
         if (snapToGrid)

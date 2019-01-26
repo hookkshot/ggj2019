@@ -54,7 +54,7 @@ public class Room : MonoBehaviour
         foreach (var zone in zones)
         {
 
-            foreach (var furniture in zone.Furniture)
+            foreach (var furniture in zone.Furniture.Where(f => f.GetComponent<InteractableFurnitureScript>() != null))
             {
                 var furnitureState = new FurnitureState();
 

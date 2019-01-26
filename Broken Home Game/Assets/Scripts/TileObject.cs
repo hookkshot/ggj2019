@@ -11,13 +11,14 @@ public class TileObject : MonoBehaviour
 
     public void MoveToCell(Tilemap tilemap, Vector2Int newCell)
     {
-        var newPosition = tilemap.CellToWorld(new Vector3Int(newCell.x, newCell.y, -1));
+        var newPosition = tilemap.GetCellCenterWorld(new Vector3Int(newCell.x, newCell.y, -1));
         if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y))) { return; }
 
         transform.position = newPosition;
         cell = newCell;
 
         ZOrdering.SetZOrdering(transform);
+        tilemap.SnapToClosestCell(transform);
     }
 
     public void Step(Tilemap tilemap, Rotation direction)

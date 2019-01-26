@@ -48,8 +48,19 @@ public class PlayerController : MonoBehaviour
     {
         var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
         var worldPoint = tilemap.CellToWorld(new Vector3Int(cellPoint.x, cellPoint.y,0));
+        var inventory = GetComponent<PlayerInventory>();
 
+        var handItem = inventory.HandItem();
+        if (handItem)
+        {
+            var handFurniture = handItem.GetComponent<InteractableFurnitureScript>();
+            handFurniture.Place(tilemap, cellPoint);
+
+            return;
+        }
+        
         var collider = Physics2D.OverlapPoint(worldPoint);
+        if (!collider) { return; }
 
         var door = collider.GetComponent<LevelDoor>();
         if (door)
@@ -59,7 +70,7 @@ public class PlayerController : MonoBehaviour
         var furniture = collider.GetComponent<InteractableFurnitureScript>();
         if (furniture)
         {
-
+            furniture.Pickup(this);
         }
     }
 }

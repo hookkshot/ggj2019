@@ -13,8 +13,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //if (tilemap != null)
-        //    Setup(tilemap);
+        if (tilemap != null) { Setup(tilemap, Rotation.NORTH); }
         
     }
 
@@ -104,7 +103,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        var collider = Physics2D.OverlapPoint(worldPoint, LayerMask.GetMask("Interactable"));
+        var collider = Physics2D.OverlapPoint(worldPoint, LayerMask.GetMask(new string[] { "Furniture", "Interactable" }));
         if (!collider) { return; }
 
         var door = collider.GetComponent<LevelDoor>();

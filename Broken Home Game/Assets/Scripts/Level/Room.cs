@@ -74,6 +74,8 @@ public class Room : MonoBehaviour
     {
         bool hasFengShui = true;
 
+        if (zones == null) { return; }
+
         foreach (var zone in zones)
         {
             hasFengShui &= zone.HasFengShui;

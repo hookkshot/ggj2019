@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 public class TileObject : MonoBehaviour
 {
     Vector2Int cell;
+
+    [SerializeField]
     Rotation rotation = Rotation.NORTH;
 
     public Vector2Int GetCell() { return cell; }
@@ -13,7 +15,7 @@ public class TileObject : MonoBehaviour
     public void MoveToCell(Tilemap tilemap, Vector2Int newCell)
     {
         var newPosition = tilemap.GetCellCenterWorld(new Vector3Int(newCell.x, newCell.y, -1));
-        if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y))) { return; }
+        if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y), ~LayerMask.GetMask("Zone"))) { return; }
         if(!tilemap.GetTile(new Vector3Int(newCell.x, newCell.y, 0))) { return; }
 
         transform.position = newPosition;

@@ -18,6 +18,12 @@ public class PlayerInventory : MonoBehaviour
         return Inventory[0];
     }
 
+    public void Drop(GameObject o)
+    {
+        if (o == null) { return; }
+        Inventory.Remove(o);
+    }
+
     public void AddToInventory(GameObject o)
     {
         Inventory.Insert(0, o);

@@ -13,9 +13,19 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (tilemap != null)
+            Setup(tilemap);
+        
+    }
+
+    public void Setup(Tilemap tilemap)
+    {
+        this.tilemap = tilemap;
         tileObject = gameObject.GetComponentInChildren<TileObject>();
         tileObject.Face(tileObject.GetRotation());
-        tilemap.SnapToClosestCell(transform);
+
+        var cell = tilemap.SnapToClosestCell(transform);
+        tileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y));
     }
 
     // Update is called once per frame
@@ -54,7 +64,7 @@ public class PlayerController : MonoBehaviour
         if (handItem)
         {
             var handFurniture = handItem.GetComponent<InteractableFurnitureScript>();
-            handFurniture.Place(tilemap, cellPoint);
+            handFurniture.Place(inventory, tilemap, cellPoint);
 
             return;
         }
@@ -70,7 +80,7 @@ public class PlayerController : MonoBehaviour
         var furniture = collider.GetComponent<InteractableFurnitureScript>();
         if (furniture)
         {
-            furniture.Pickup(this);
+            furniture.Pickup(inventory);
         }
     }
 }

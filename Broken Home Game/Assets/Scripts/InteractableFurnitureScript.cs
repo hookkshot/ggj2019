@@ -36,7 +36,10 @@ public class InteractableFurnitureScript : MonoBehaviour
         ZoneScript zoneScript = gameObject.GetComponentInParent<ZoneScript>();
 
         transform.parent = player.transform;
-        transform.localPosition = player.transform.up;
+
+        var rotationOffset = Quaternion.Euler(60, 0, 45);
+
+        transform.localPosition = rotationOffset * player.transform.up;
 
         // TODO find zone
         //zoneScript.OnUpdateLayout();

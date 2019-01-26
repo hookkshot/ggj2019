@@ -3,23 +3,6 @@ using UnityEngine.Tilemaps;
 
 public class InteractableFurniture : Furniture
 {
-    [SerializeField] bool setZOrdering = true;
-
-    ZoneScript zone;
-
-    public void SetZone(ZoneScript z)
-    {
-        zone = z;
-    }
-
-    private void Awake()
-    {
-        if (setZOrdering)
-        {
-            ZOrdering.SetZOrdering(gameObject.transform);
-        }
-    }
-
     public void Place(PlayerInventory player, Tilemap map, Vector2Int cell)
     {
         player.Drop(gameObject);
@@ -27,12 +10,9 @@ public class InteractableFurniture : Furniture
         var tileObject = GetComponent<TileObject>();
         tileObject.MoveToCell(map, cell);
 
-        if (setZOrdering)
-        {
-            ZOrdering.SetZOrdering(gameObject.transform);
-        }
+        ZOrdering.SetZOrdering(gameObject.transform);
 
-        if (zone) { zone.OnUpdateLayout(); }
+        if (Zone) { Zone.OnUpdateLayout(); }
     }
 
     public void Pickup(PlayerInventory player)
@@ -42,7 +22,7 @@ public class InteractableFurniture : Furniture
 
     private void OnDisable()
     {
-        if (zone) { zone.RemoveFurniture(this); }
+        if (Zone) { Zone.RemoveFurniture(this); }
     }
 
     public void Rotate()

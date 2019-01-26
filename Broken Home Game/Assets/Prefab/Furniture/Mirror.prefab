@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3212104477784631017}
   - component: {fileID: 3212104477784631030}
   - component: {fileID: 3212104477784631024}
-  - component: {fileID: 3212104477784631027}
   - component: {fileID: 3212104477784631026}
   - component: {fileID: 7366251500087476339}
   m_Layer: 8
@@ -75,25 +74,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 0
---- !u!114 &3212104477784631027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3212104477784631016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69dcf87e9a9356b4088a26b83dd6b417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rules:
-  - {fileID: 11400000, guid: 67eb6cecfa9d9ce4ab4f93de9753766f, type: 2}
-  - {fileID: 11400000, guid: 864e4ec201b865643ba6b00e2b6fc802, type: 2}
-  tags:
-  - Mirror
-  snapToGrid: 1
-  TypeName: Mirror
 --- !u!114 &3212104477784631026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +86,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1151e8eace7c7674cbb101f18a0d2ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rules:
+  - {fileID: 11400000, guid: 67eb6cecfa9d9ce4ab4f93de9753766f, type: 2}
+  - {fileID: 11400000, guid: 864e4ec201b865643ba6b00e2b6fc802, type: 2}
+  tags:
+  - Mirror
+  snapToGrid: 1
+  TypeName: Mirror
   setZOrdering: 1
 --- !u!50 &7366251500087476339
 Rigidbody2D:

@@ -349,8 +349,9 @@ MonoBehaviour:
   FirstScene: Hallway
   FirstDoor: Entrance
   FurniturePrefabs:
-  - {fileID: 7927960967899577180, guid: f09f3c4607a0d1b4c870fc06cb21887b, type: 3}
-  - {fileID: 3212104477784631027, guid: 6467e4b71dd5a7c498157f256d2ca145, type: 3}
+  - {fileID: 7927960967899577183, guid: f09f3c4607a0d1b4c870fc06cb21887b, type: 3}
+  - {fileID: 3212104477784631026, guid: 6467e4b71dd5a7c498157f256d2ca145, type: 3}
+  - {fileID: 7927960967899577183, guid: 1f0a85608d3351e44870c9778e2f3ae3, type: 3}
   GameUi: {fileID: 1325234426}
   roomText: {fileID: 1582779106}
 --- !u!1001 &2186563925634340057

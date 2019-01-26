@@ -13,6 +13,8 @@ public class Furniture : MonoBehaviour
 
     bool hasFengShui = false;
 
+    public ZoneScript Zone { get; set; }
+
     public TileObject TileObject { get; private set; } = null;
     public string[] FurnitureTags { get => tags; }
 
@@ -29,6 +31,8 @@ public class Furniture : MonoBehaviour
                 TileObject.Face(TileObject.GetRotation());
             }
         }
+
+        ZOrdering.SetZOrdering(gameObject.transform);
     }
 
     public bool HasFengShui()

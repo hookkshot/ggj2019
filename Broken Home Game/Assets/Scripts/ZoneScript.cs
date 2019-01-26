@@ -14,8 +14,7 @@ public class ZoneScript : MonoBehaviour
 
         foreach (var f in furniture)
         {
-            var fn = f.GetComponent<InteractableFurniture>();
-            if (fn) { fn.SetZone(this); }
+            f.Zone = this;
         }
     }
 
@@ -32,11 +31,9 @@ public class ZoneScript : MonoBehaviour
         room.OnZoneUpdate();
     }
 
-    public void RemoveFurniture(InteractableFurniture f)
+    public void RemoveFurniture(Furniture f)
     {
-        var fn = f.GetComponent<Furniture>();
-
-        furniture.Remove(fn);
+        furniture.Remove(f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,9 +42,7 @@ public class ZoneScript : MonoBehaviour
         var f = collision.gameObject.GetComponent<Furniture>();
         if (f && !furniture.Contains(f)) {
             furniture.Add(f);
-
-            var fn = f.GetComponent<InteractableFurniture>();
-            if (fn) { fn.SetZone(this); }
+            f.Zone = this;
         }
 
         OnUpdateLayout();

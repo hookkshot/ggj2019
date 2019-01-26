@@ -86,12 +86,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1151e8eace7c7674cbb101f18a0d2ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rules: []
+  rules:
+  - {fileID: 11400000, guid: b448e831169dc8c4790fce93c8185e6e, type: 2}
   tags:
   - Chair
   snapToGrid: 1
   TypeName: Armchair
-  setZOrdering: 1
 --- !u!50 &8267343290027933346
 Rigidbody2D:
   serializedVersion: 4

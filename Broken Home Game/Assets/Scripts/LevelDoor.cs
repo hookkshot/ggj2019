@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class LevelDoor : MonoBehaviour
 {
@@ -8,6 +9,13 @@ public class LevelDoor : MonoBehaviour
     public string SceneConnection;
     public string DoorConnection;
     public Rotation Rotation;
+
+    private void Start()
+    {
+        Tilemap tilemap = FindObjectOfType<Tilemap>();
+
+        tilemap.SnapToClosestCell(transform);
+    }
 
     public override string ToString()
     {

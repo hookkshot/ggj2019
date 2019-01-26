@@ -5,6 +5,7 @@ using UnityEngine;
 public class ZoneScript : MonoBehaviour
 {
     List<Furniture> furniture;
+    public bool HasFengShui { get; private set; }
 
     // Start is called before the first frame update
     void Awake()
@@ -13,9 +14,15 @@ public class ZoneScript : MonoBehaviour
     }
 
     public void OnUpdateLayout() {
+        HasFengShui = true;
+
         foreach (var script in furniture)
         {
             script.UpdateFengShui();
+            HasFengShui &= script.HasFengShui();
         }
+
+        var room = GetComponentInParent<Room>();
+        room.OnZoneUpdate();
     }
 }

@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static GameStateManager _instance;
+
+    [SerializeField]
+    private string[] gameLevels;
+
+    [SerializeField]
+    private PlayerController playerController;
+
+    private void Awake()
     {
-        
+        if (_instance) Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
+        _instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
-        
+        Debug.Log("Start Game");
     }
 }

@@ -45,9 +45,11 @@ static class ExtensionMethods
         return rotation.RotateLeft().RotateLeft().RotateLeft();
     }
 
-    public static void SnapToClosestCell(this Tilemap tilemap, Transform transformToSnap)
+    public static Vector3Int SnapToClosestCell(this Tilemap tilemap, Transform transformToSnap)
     {
         Vector3Int gridPosition = tilemap.layoutGrid.WorldToCell(transformToSnap.position);
         transformToSnap.position = tilemap.layoutGrid.CellToWorld(gridPosition);
+
+        return gridPosition;
     }
 }

@@ -9,6 +9,23 @@ public class MustFaceDifferentDirectionToObject : FurnitureRule
 
     public override bool Passes(Furniture checkingObject)
     {
-        return false;
+        if (!checkingObject.Zone) { return false; }
+
+        var checkingTile = checkingObject.GetComponent<TileObject>();
+        if (!checkingTile) { return true; }
+
+        var rotation = checkingTile.GetRotation();
+
+        foreach (var f in checkingObject.Zone.Furniture)
+        {
+            if (!f.FurnitureTags.Intersect(_affectedTags).Any()) { continue; }
+
+            var tileComponent = f.GetComponent<TileObject>();
+            if (!tileComponent) { continue; }
+
+            if (tileComponent.GetRotation() == rotation) { return false; }
+        }
+
+        return true;
     }
 }

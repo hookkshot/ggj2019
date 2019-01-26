@@ -321,8 +321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Hallway
   doors:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1982693200}
+  - {fileID: 1135732708}
   Tilemap: {fileID: 1890964535}
 --- !u!1 &704141433
 GameObject:
@@ -457,6 +457,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22419effe33e771428a2dd4faf3846a6, type: 3}
+--- !u!114 &1135732708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135732707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f4a73f021bfe542950a644507b4623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681904541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,3 +1038,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22419effe33e771428a2dd4faf3846a6, type: 3}
+--- !u!114 &1982693200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1982693199}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f4a73f021bfe542950a644507b4623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

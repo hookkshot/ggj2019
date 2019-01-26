@@ -17,11 +17,12 @@ public class CannotFaceObjects : FurnitureRule
 
         RaycastHit2D[] results = new RaycastHit2D[2];
 
-        var resultCount = Physics2D.Raycast(checkingObject.transform.position, t.transform.forward, filter, results);
+        var resultCount = Physics2D.Raycast(checkingObject.transform.position, t.transform.up, filter, results);
 
         foreach (var hit in results)
         {
             if (!hit.collider) { continue; }
+
             if (hit.collider.gameObject == checkingObject.gameObject) { continue; }
 
             var furniture = hit.collider.gameObject.GetComponentInParent<Furniture>();

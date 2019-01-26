@@ -31,6 +31,8 @@ public class InteractableFurnitureScript : MonoBehaviour
         {
             ZOrdering.SetZOrdering(gameObject.transform);
         }
+
+        if (zone) { zone.OnUpdateLayout(); }
     }
 
     public void Pickup(PlayerInventory player)

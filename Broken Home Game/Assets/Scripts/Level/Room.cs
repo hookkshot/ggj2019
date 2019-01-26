@@ -39,7 +39,7 @@ public class Room : MonoBehaviour
 
     public void ToState(RoomState state)
     {
-        foreach (var furniture in FindObjectsOfType<Furniture>())
+        foreach (var furniture in FindObjectsOfType<Furniture>().Where(f => f.GetComponent<InteractableFurnitureScript>() != null))
         {
             Destroy(furniture.gameObject);
         }

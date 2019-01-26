@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a69b86bb0b4c344ac8ebbf1b799fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lounge
+  SceneName: Kitchen
   doors:
   - {fileID: 1041428091}
   Tilemap: {fileID: 1890964535}
@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7ef02518bd0a5479fef2de82161493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotation: 0
 --- !u!1 &1890964532
 GameObject:
   m_ObjectHideFlags: 0

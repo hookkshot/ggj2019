@@ -24,6 +24,11 @@ public class TileObject : MonoBehaviour
         ZOrdering.SetZOrdering(transform);
     }
 
+    public void SetCell(Tilemap tilemap)
+    {
+        cell = (Vector2Int)tilemap.WorldToCell(transform.position);
+    }
+
     public void Step(Tilemap tilemap, Rotation direction)
     {
         MoveToCell(tilemap, cell.Step(direction));

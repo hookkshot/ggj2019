@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 public class InteractableFurnitureScript : MonoBehaviour
 {
     [SerializeField] bool setZOrdering = true;
+    float holdPosition = 0.5f;
 
     private void Awake()
     {
@@ -37,9 +38,7 @@ public class InteractableFurnitureScript : MonoBehaviour
 
         transform.parent = player.transform;
 
-        var rotationOffset = Quaternion.Euler(60, 0, 45);
-
-        transform.localPosition = rotationOffset * player.transform.up;
+        transform.localPosition = (Vector3.up - Vector3.forward) * holdPosition;
 
         // TODO find zone
         //zoneScript.OnUpdateLayout();

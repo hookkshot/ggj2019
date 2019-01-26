@@ -3,7 +3,7 @@ using UnityEngine.Tilemaps;
 
 public class TileObject : MonoBehaviour
 {
-    Vector2Int cell = new Vector2Int(0, 0);
+    Vector2Int cell;
     Rotation rotation = Rotation.NORTH;
 
     public Vector2Int GetCell() { return cell; }

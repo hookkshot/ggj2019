@@ -26,7 +26,7 @@ public class GameStateManager : MonoBehaviour
 
     private bool sceneHasLoaded;
 
-    private Level currentLevel;
+    private Room currentRoom;
     private PlayerController playerController;
 
     private void Awake()
@@ -63,11 +63,11 @@ public class GameStateManager : MonoBehaviour
             yield return 0;
         }
 
-        currentLevel = FindObjectOfType<Level>();
-
-        var spawnPoint = currentLevel.GetDoor(doorName)?.transform.position ?? Vector3.zero;
+        currentRoom = FindObjectOfType<Room>();
+        var door = currentRoom.GetDoor(doorName);
+        var spawnPoint = door?.transform.position ?? Vector3.zero;
 
         playerController = Instantiate(playerControllerPrefab, spawnPoint, Quaternion.identity);
-        playerController.Setup(currentLevel.Tilemap);
+        playerController.Setup(currentRoom.Tilemap, door.Rotation);
     }
 }

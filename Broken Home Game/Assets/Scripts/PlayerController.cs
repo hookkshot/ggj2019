@@ -13,19 +13,20 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if (tilemap != null)
-            Setup(tilemap);
+        //if (tilemap != null)
+        //    Setup(tilemap);
         
     }
 
-    public void Setup(Tilemap tilemap)
+    public void Setup(Tilemap tilemap, Rotation rotation)
     {
         this.tilemap = tilemap;
         tileObject = GetComponent<TileObject>();
-        tileObject.Face(tileObject.GetRotation());
+        tileObject.Face(rotation);
 
         var cell = tilemap.SnapToClosestCell(transform);
-        tileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y));
+        Debug.Log(cell + ", " + transform);
+        tileObject.Step(tilemap, rotation);
     }
 
     // Update is called once per frame
@@ -82,7 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
         var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y, 0));
-var inventory = GetComponent<PlayerInventory>();
+        var inventory = GetComponent<PlayerInventory>();
 
         var handItem = inventory.HandItem();
         if (handItem)
@@ -93,9 +94,7 @@ var inventory = GetComponent<PlayerInventory>();
             return;
         }
 
-        var collider = Physics2D.OverlapPoint(worldPoint);
-        
-        Debug.DrawRay(transform.position, (worldPoint - transform.position).normalized * 1);
+        var collider = Physics2D.OverlapPoint(worldPoint, LayerMask.GetMask("Interactable"));
         if (!collider) { return; }
 
         var door = collider.GetComponent<LevelDoor>();

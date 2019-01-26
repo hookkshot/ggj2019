@@ -203,31 +203,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 556633904}
-  - component: {fileID: 556633903}
+  - component: {fileID: 556633905}
   m_Layer: 0
-  m_Name: Level
+  m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &556633903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556633902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b4d3686d6c5e7499310dac30a07a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: Lounge
-  zones: []
-  doors:
-  - {fileID: 1041428091}
-  Tilemap: {fileID: 1890964535}
 --- !u!4 &556633904
 Transform:
   m_ObjectHideFlags: 0
@@ -242,6 +225,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &556633905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556633902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a69b86bb0b4c344ac8ebbf1b799fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Lounge
+  doors:
+  - {fileID: 1041428091}
+  - {fileID: 639026022}
+  Tilemap: {fileID: 1890964535}
 --- !u!1 &639026021
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 639026023}
   - component: {fileID: 639026022}
   - component: {fileID: 639026024}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KitchenDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,6 +275,7 @@ MonoBehaviour:
   Name: Kitchen
   SceneConnection: Kitchen
   DoorConnection: Lounge
+  Rotation: 3
 --- !u!4 &639026023
 Transform:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639026021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1, z: 0.45744112}
+  m_LocalPosition: {x: 2, y: 1.25, z: 0.45744112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -359,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041428092}
   - component: {fileID: 1041428091}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EntranceDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,6 +382,7 @@ MonoBehaviour:
   Name: Entrance
   SceneConnection: 
   DoorConnection: 
+  Rotation: 1
 --- !u!4 &1041428092
 Transform:
   m_ObjectHideFlags: 0
@@ -389,7 +391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041428090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -0.5, z: 0.45744112}
+  m_LocalPosition: {x: -2, y: -0.75, z: 0.45744112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

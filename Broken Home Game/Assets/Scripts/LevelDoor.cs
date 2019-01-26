@@ -7,6 +7,7 @@ public class LevelDoor : MonoBehaviour
     public string Name;
     public string SceneConnection;
     public string DoorConnection;
+    public Rotation Rotation;
 
     public override string ToString()
     {

@@ -36,6 +36,28 @@ public class PlayerController : MonoBehaviour
             tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Interact();            
+        }
+    }
 
+    private void Interact()
+    {
+        var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
+        var worldPoint = tilemap.CellToWorld(new Vector3Int(cellPoint.x, cellPoint.y,0));
+
+        var collider = Physics2D.OverlapPoint(worldPoint);
+
+        var door = collider.GetComponent<LevelDoor>();
+        if (door)
+        {
+            GameStateManager.Instance.MoveToLevel(door.SceneConnection, door.DoorConnection);
+        }
+        var furniture = collider.GetComponent<InteractableFurnitureScript>();
+        if (furniture)
+        {
+
+        }
     }
 }

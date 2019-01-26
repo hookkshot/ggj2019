@@ -71,6 +71,11 @@ public class PlayerController : MonoBehaviour
         {
             Interact();            
         }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            inventory.SpinInventory();
+        }
     }
 
     private void Interact()

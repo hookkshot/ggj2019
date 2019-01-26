@@ -3,18 +3,14 @@ using UnityEngine.Tilemaps;
 
 public class InteractableFurnitureScript : MonoBehaviour
 {
-    [SerializeField] bool adjustZOrdering = true;
-
-    ZoneScript zoneScript = null;
+    [SerializeField] bool setZOrdering = true;
 
     private void Awake()
     {
-        zoneScript = gameObject.GetComponentInParent<ZoneScript>();
-        if (adjustZOrdering)
+        if (setZOrdering)
         {
-            ZOrdering.SetZOrdering(transform);
+            ZOrdering.SetZOrdering(gameObject.transform);
         }
-
     }
 
     void Place(Tilemap map, Vector3Int cell)
@@ -22,17 +18,17 @@ public class InteractableFurnitureScript : MonoBehaviour
         gameObject.transform.parent = map.transform;
         gameObject.transform.localPosition = map.CellToLocal(cell);
 
-        zoneScript.OnUpdateLayout();
-
-        if (adjustZOrdering)
+        if (setZOrdering)
         {
-            ZOrdering.SetZOrdering(transform);
+            ZOrdering.SetZOrdering(gameObject.transform);
         }
+
+        gameObject.GetComponentInParent<ZoneScript>().OnUpdateLayout();
     }
 
     void Pickup(PlayerController player)
     {
-        var zoneScript = gameObject.GetComponentInParent<ZoneScript>();
+        ZoneScript zoneScript = gameObject.GetComponentInParent<ZoneScript>();
 
         gameObject.transform.parent = player.transform;
         gameObject.transform.localPosition = new Vector3(0, 0, 1);

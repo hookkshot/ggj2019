@@ -15,16 +15,17 @@ public class Furniture : MonoBehaviour
     public TileObject TileObject { get; private set; } = null;
     public string[] FurnitureTags { get => tags; }
 
-    private void Awake()
+    private void Start()
     {
         TileObject = GetComponent<TileObject>();
         if (snapToGrid)
         {
             Tilemap tilemap = FindObjectOfType<Tilemap>();
-            var cell = tilemap.SnapToClosestCell(this.transform);
+
+            var cell = tilemap.SnapToClosestCell(transform);
             if (TileObject) {
-                TileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y));
-                TileObject.Face(TileObject.GetRotation());
+                //TileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y));
+                //TileObject.Face(TileObject.GetRotation());
             }
         }
     }

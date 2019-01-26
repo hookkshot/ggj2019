@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
@@ -7,14 +6,13 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] Camera itemCamera = null;
     Vector3 handPos;
 
-    public List<GameObject> Inventory { get; private set; }
+    public List<GameObject> Inventory { get; private set; } = new List<GameObject> { null };
 
     private void Awake()
     {
         itemCamera = transform.root.GetComponentInChildren<Camera>();
         Debug.Assert(itemCamera != null, "No Item camera on player heirachy");
         itemCamera.gameObject.SetActive(false);
-        Inventory = new List<GameObject> { null };
     }
 
     private void Update()
@@ -63,18 +61,7 @@ public class PlayerInventory : MonoBehaviour
 
         Inventory.RemoveAt(0);
         Inventory.Add(first);
-
-        GameObject nextItem = (Inventory.Count > 1) ? Inventory[1] : null;
-
-        // ewww magic strings and fragile code.. yeh don't care
-        if (nextItem != null)
-        {
-            nextItem.SetActive(true);
-            nextItem.SetLayer(LayerMask.NameToLayer("Inventory"));
-            itemCamera.Render();
-            nextItem.SetLayer(LayerMask.NameToLayer("Furniture"));
-            nextItem.SetActive(false);
-        }
+        SetNextItemIcon();
 
         foreach (GameObject o in Inventory)
         {
@@ -86,6 +73,33 @@ public class PlayerInventory : MonoBehaviour
         {
             HandItem().SetActive(true);
             handPos = HandItem().transform.localPosition;
+        }
+    }
+
+    private void SetNextItemIcon()
+    {
+        GameObject nextItem = (Inventory.Count > 1) ? Inventory[1] : null;
+
+        // ewww magic strings and fragile code.. yeh don't care
+        if (nextItem != null)
+        {
+            nextItem.SetActive(true);
+            nextItem.SetLayer(LayerMask.NameToLayer("Inventory"));
+
+            Quaternion rotation = nextItem.transform.rotation;
+            nextItem.transform.LookAt(itemCamera.transform, itemCamera.transform.up);
+            nextItem.transform.rotation *= Quaternion.Euler(new Vector3(90f, 0f, 0f));
+
+            itemCamera.Render();
+
+            nextItem.transform.rotation = rotation;
+
+            nextItem.SetLayer(LayerMask.NameToLayer("Furniture"));
+            nextItem.SetActive(false);
+        }
+        else
+        {
+            itemCamera.Render();
         }
     }
 

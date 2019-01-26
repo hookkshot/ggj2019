@@ -31,9 +31,9 @@ public class TileObject : MonoBehaviour
         switch(rotation)
         {
             case Rotation.NORTH: transform.localRotation = rotationOffset * Quaternion.AngleAxis(0, Vector3.forward); break;
-            case Rotation.EAST: transform.localRotation = rotationOffset * Quaternion.AngleAxis(90, Vector3.forward); break;
+            case Rotation.EAST: transform.localRotation = rotationOffset * Quaternion.AngleAxis(270, Vector3.forward); break;
             case Rotation.SOUTH: transform.localRotation = rotationOffset * Quaternion.AngleAxis(180, Vector3.forward); break;
-            case Rotation.WEST: transform.localRotation = rotationOffset * Quaternion.AngleAxis(270, Vector3.forward); break;
+            case Rotation.WEST: transform.localRotation = rotationOffset * Quaternion.AngleAxis(90, Vector3.forward); break;
             default: break;
         }
     }

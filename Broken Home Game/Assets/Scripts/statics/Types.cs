@@ -17,9 +17,9 @@ static class ExtensionMethods
         switch (rotation)
         {
             case Rotation.NORTH: ++pos.y; break;
-            case Rotation.EAST: --pos.x; break;
+            case Rotation.EAST: ++pos.x; break;
             case Rotation.SOUTH: --pos.y; break;
-            case Rotation.WEST: ++pos.x; break;
+            case Rotation.WEST: --pos.x; break;
             default: break;
         }
 

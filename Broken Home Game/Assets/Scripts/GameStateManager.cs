@@ -45,7 +45,6 @@ public class GameStateManager : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("Start Game");
         MoveToLevel(FirstScene, FirstDoor);
     }
 

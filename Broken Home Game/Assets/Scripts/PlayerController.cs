@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private BoundsInt currentBounds;
     private TileObject tileObject;
 
-    void Awake()
+    void Start()
     {
         if (tilemap != null)
             Setup(tilemap);
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public void Setup(Tilemap tilemap)
     {
         this.tilemap = tilemap;
-        tileObject = gameObject.GetComponentInChildren<TileObject>();
+        tileObject = GetComponent<TileObject>();
         tileObject.Face(tileObject.GetRotation());
 
         var cell = tilemap.SnapToClosestCell(transform);
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     private void Interact()
     {
         var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
-        var worldPoint = tilemap.CellToWorld(new Vector3Int(cellPoint.x, cellPoint.y,0));
+        var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y,0));
         var inventory = GetComponent<PlayerInventory>();
 
         var handItem = inventory.HandItem();
@@ -92,8 +92,10 @@ public class PlayerController : MonoBehaviour
 
             return;
         }
-        
+
         var collider = Physics2D.OverlapPoint(worldPoint);
+        
+        Debug.DrawRay(transform.position, (worldPoint - transform.position).normalized * 1);
         if (!collider) { return; }
 
         var door = collider.GetComponent<LevelDoor>();

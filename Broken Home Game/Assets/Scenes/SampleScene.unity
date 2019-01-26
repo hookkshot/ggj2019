@@ -254,6 +254,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 279267105}
     m_Modifications:
+    - target: {fileID: 5469839437926428336, guid: 336538d0fa6253d4f845347c22dccd8e,
+        type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 1962631464}
     - target: {fileID: 5469839439395015931, guid: 336538d0fa6253d4f845347c22dccd8e,
         type: 3}
       propertyPath: m_Name
@@ -329,11 +334,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.09999999
       objectReference: {fileID: 0}
-    - target: {fileID: 5469839437926428336, guid: 336538d0fa6253d4f845347c22dccd8e,
-        type: 3}
-      propertyPath: tilemap
-      value: 
-      objectReference: {fileID: 1962631464}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 336538d0fa6253d4f845347c22dccd8e, type: 3}
 --- !u!1 &893254699
@@ -437,11 +437,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1216356831058347282, guid: d49401537a9634d4fbb2e3b9b072be30,
-        type: 3}
-      propertyPath: m_Name
-      value: Directional Light
-      objectReference: {fileID: 0}
     - target: {fileID: 1216356831058347292, guid: d49401537a9634d4fbb2e3b9b072be30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,6 +491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216356831058347282, guid: d49401537a9634d4fbb2e3b9b072be30,
+        type: 3}
+      propertyPath: m_Name
+      value: Directional Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d49401537a9634d4fbb2e3b9b072be30, type: 3}
@@ -703,6 +703,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280433251206021467, guid: d0101a5c93f5a144bbdb184ea21979e6,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 5431
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0101a5c93f5a144bbdb184ea21979e6, type: 3}

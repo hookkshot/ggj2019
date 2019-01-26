@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
+[RequireComponent(typeof(TileObject), typeof(PlayerInventory))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -11,8 +10,8 @@ public class PlayerController : MonoBehaviour
     private BoundsInt currentBounds;
     private TileObject tileObject;
 
-    void Start()
-    {        
+    void Awake()
+    {   
     }
 
     public void Setup(Tilemap tilemap, Rotation rotation)

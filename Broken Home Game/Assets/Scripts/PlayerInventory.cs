@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+    [SerializeField] Camera itemCamera = null;
     Vector3 handPos;
 
     public List<GameObject> Inventory { get; private set; }
 
     private void Awake()
     {
-        Inventory = new List<GameObject>{ null };
+        itemCamera = transform.root.GetComponentInChildren<Camera>();
+        Debug.Assert(itemCamera != null, "No Item camera on player heirachy");
+        itemCamera.gameObject.SetActive(false);
+        Inventory = new List<GameObject> { null };
     }
 
     private void Update()
@@ -18,7 +22,7 @@ public class PlayerInventory : MonoBehaviour
         var h = HandItem();
         if (!h) { return; }
 
-        h.transform.localPosition = handPos + new Vector3(0, 0.25f + Mathf.Sin(Time.realtimeSinceStartup*2) / 16, 0);
+        h.transform.localPosition = handPos + new Vector3(0, 0.25f + Mathf.Sin(Time.realtimeSinceStartup * 2) / 16, 0);
     }
 
     public GameObject HandItem()
@@ -59,6 +63,18 @@ public class PlayerInventory : MonoBehaviour
 
         Inventory.RemoveAt(0);
         Inventory.Add(first);
+
+        GameObject nextItem = (Inventory.Count > 1) ? Inventory[1] : null;
+
+        // ewww magic strings and fragile code.. yeh don't care
+        if (nextItem != null)
+        {
+            nextItem.SetActive(true);
+            nextItem.SetLayer(LayerMask.NameToLayer("Inventory"));
+            itemCamera.Render();
+            nextItem.SetLayer(LayerMask.NameToLayer("Furniture"));
+            nextItem.SetActive(false);
+        }
 
         foreach (GameObject o in Inventory)
         {

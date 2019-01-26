@@ -44,7 +44,7 @@ public class InteractableFurniture : Furniture
 
         float time = 0;
 
-        Instantiate(GameStateManager.Instance.GetEffect("GhostParticles"), transform.position, Quaternion.identity);
+        //Instantiate(GameStateManager.Instance.GetEffect("GhostParticles"), transform.position, Quaternion.identity);
 
         while (time < 1f)
         {

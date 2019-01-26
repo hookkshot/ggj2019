@@ -13,28 +13,35 @@ public class InteractableFurnitureScript : MonoBehaviour
         }
     }
 
-    public void Place(Tilemap map, Vector2Int cell)
+    public void Place(PlayerInventory player, Tilemap map, Vector2Int cell)
     {
-        gameObject.transform.parent = map.transform;
-        gameObject.transform.localPosition = map.CellToLocal(new Vector3Int(cell.x, cell.y, -1));
+        player.Drop(gameObject);
+
+        transform.parent = map.transform;
+
+        var tileObject = GetComponent<TileObject>();
+        tileObject.MoveToCell(map, cell);
 
         if (setZOrdering)
         {
             ZOrdering.SetZOrdering(gameObject.transform);
         }
 
-        gameObject.GetComponentInParent<ZoneScript>().OnUpdateLayout();
+        // TODO FIND ZONE
+        // gameObject.GetComponentInParent<ZoneScript>().OnUpdateLayout();
     }
 
-    public void Pickup(PlayerController player)
+    public void Pickup(PlayerInventory player)
     {
         ZoneScript zoneScript = gameObject.GetComponentInParent<ZoneScript>();
 
-        gameObject.transform.parent = player.transform;
-        gameObject.transform.localPosition = new Vector3(0, 0, 1);
-        gameObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        transform.parent = player.transform;
+        transform.localPosition = player.transform.up;
 
-        zoneScript.OnUpdateLayout();
+        // TODO find zone
+        //zoneScript.OnUpdateLayout();
+
+        player.AddToInventory(gameObject);
     }
 
     public void Rotate()

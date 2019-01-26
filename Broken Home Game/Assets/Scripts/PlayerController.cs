@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (handItem)
         {
             var handFurniture = handItem.GetComponent<InteractableFurnitureScript>();
-            handFurniture.Place(tilemap, cellPoint);
+            handFurniture.Place(inventory, tilemap, cellPoint);
 
             return;
         }
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         var furniture = collider.GetComponent<InteractableFurnitureScript>();
         if (furniture)
         {
-            furniture.Pickup(this);
+            furniture.Pickup(inventory);
         }
     }
 }

@@ -9,6 +9,7 @@ public class Furniture : MonoBehaviour
     [SerializeField] string[] tags;
 
     [SerializeField] bool snapToGrid = true;
+    public string TypeName;
 
     bool hasFengShui = false;
 

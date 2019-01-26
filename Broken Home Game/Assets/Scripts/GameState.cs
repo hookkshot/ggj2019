@@ -4,5 +4,17 @@ using UnityEngine;
 
 public class GameState
 {
-    public string LevelName;
+    public Dictionary<string,RoomState> Rooms = new Dictionary<string, RoomState>();
+}
+
+public class RoomState
+{
+    public List<FurnitureState> Furnitures = new List<FurnitureState>();
+}
+
+public class FurnitureState
+{
+    public Vector2Int Cell;
+    public Rotation Rotation;
+    public string Name;
 }

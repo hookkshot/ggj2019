@@ -606,5 +606,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: FurniturePrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: FurniturePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7927960967899577180, guid: f09f3c4607a0d1b4c870fc06cb21887b,
+        type: 3}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: FurniturePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 3212104477784631027, guid: 6467e4b71dd5a7c498157f256d2ca145,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}

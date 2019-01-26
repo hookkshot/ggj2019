@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         var handItem = inventory.HandItem();
         if (handItem)
         {
-            var handFurniture = handItem.GetComponent<InteractableFurnitureScript>();
+            var handFurniture = handItem.GetComponent<InteractableFurniture>();
             handFurniture.Place(inventory, tilemap, cellPoint);
 
             return;
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         {
             GameStateManager.Instance.MoveToLevel(door.SceneConnection, door.DoorConnection);
         }
-        var furniture = collider.GetComponent<InteractableFurnitureScript>();
+        var furniture = collider.GetComponent<InteractableFurniture>();
         if (furniture)
         {
             furniture.Pickup(inventory);

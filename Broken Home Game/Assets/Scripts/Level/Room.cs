@@ -39,7 +39,7 @@ public class Room : MonoBehaviour
 
     public void ToState(RoomState state)
     {
-        foreach (var furniture in FindObjectsOfType<Furniture>().Where(f => f.GetComponent<InteractableFurnitureScript>() != null))
+        foreach (var furniture in FindObjectsOfType<Furniture>().Where(f => f.GetComponent<InteractableFurniture>() != null))
         {
             Destroy(furniture.gameObject);
         }
@@ -60,7 +60,7 @@ public class Room : MonoBehaviour
         foreach (var zone in zones)
         {
 
-            foreach (var furniture in zone.Furniture.Where(f => f.GetComponent<InteractableFurnitureScript>() != null))
+            foreach (var furniture in zone.Furniture.Where(f => f.GetComponent<InteractableFurniture>() != null))
             {
                 var furnitureState = new FurnitureState();
 

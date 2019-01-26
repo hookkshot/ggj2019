@@ -18,6 +18,7 @@ public class MustFaceDifferentDirectionToObject : FurnitureRule
 
         foreach (var f in checkingObject.Zone.Furniture)
         {
+            if (f == this) { continue; }
             if (!f.FurnitureTags.Intersect(_affectedTags).Any()) { continue; }
 
             var tileComponent = f.GetComponent<TileObject>();

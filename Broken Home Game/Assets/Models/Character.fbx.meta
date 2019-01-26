@@ -3,58 +3,22 @@ guid: 4a5ebc14f3472a34296e3d049a40a49e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: //RootNode
-    100004: Cube
-    100006: Cube.001
-    100008: Cube.002
-    100010: Cylinder
-    100012: Cylinder.001
-    100014: Lamp
-    100016: Sphere
-    400000: Camera
-    400002: //RootNode
-    400004: Cube
-    400006: Cube.001
-    400008: Cube.002
-    400010: Cylinder
-    400012: Cylinder.001
-    400014: Lamp
-    400016: Sphere
-    2000000: Camera
-    2100000: No Name
-    2100002: Material
-    2300000: Cube
-    2300002: Cube.001
-    2300004: Cube.002
-    2300006: Cylinder
-    2300008: Cylinder.001
-    2300010: Sphere
-    3300000: Cube
-    3300002: Cube.001
-    3300004: Cube.002
-    3300006: Cylinder
-    3300008: Cylinder.001
-    3300010: Sphere
-    4300000: Cube.002
-    4300002: Cube.001
-    4300004: Cylinder.001
-    4300006: Cylinder
-    4300008: Sphere
-    4300010: Cube
-    10800000: Lamp
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 9f213933ff00ed3489c113dc184ffb36, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 9f213933ff00ed3489c113dc184ffb36, type: 2}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Skin
+    2100002: Material.009
+    2100004: Material.002
+    2100006: Material.007
+    2100008: Material.003
+    2100010: Material.004
+    2100012: Material.005
+    2100014: Hair
+    2100016: Material.010
+    2100018: Material.006
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Character
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -82,17 +46,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -109,14 +73,14 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 90
+    normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

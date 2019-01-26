@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (!o) { continue; }
                 o.transform.position = worldPoint;
+                ZOrdering.SetZOrdering(o.transform);
             }
         }
 

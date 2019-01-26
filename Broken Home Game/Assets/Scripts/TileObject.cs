@@ -18,7 +18,6 @@ public class TileObject : MonoBehaviour
         cell = newCell;
 
         ZOrdering.SetZOrdering(transform);
-        tilemap.SnapToClosestCell(transform);
     }
 
     public void Step(Tilemap tilemap, Rotation direction)

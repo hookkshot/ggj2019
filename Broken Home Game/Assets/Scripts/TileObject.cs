@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TileObject : MonoBehaviour
@@ -13,10 +11,8 @@ public class TileObject : MonoBehaviour
 
     public void MoveToCell(Tilemap tilemap, Vector2Int newCell)
     {
-        var newPosition = tilemap.CellToWorld(new Vector3Int(newCell.x, newCell.y, -1));
-        if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y))) { return; }
-
-        transform.position = newPosition;
+        transform.localPosition = tilemap.CellToLocal(new Vector3Int(newCell.x, newCell.y, -1));
+        ZOrdering.SetZOrdering(this.transform);
         cell = newCell;
     }
 

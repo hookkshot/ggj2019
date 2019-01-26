@@ -25,7 +25,7 @@ public class MainMenu : Screen
 
     public void Play()
     {
-        //Create game state manager
+        GameStateManager.Instance.StartGame();
     }
 
     public void Quit()

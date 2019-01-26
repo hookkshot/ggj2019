@@ -34,6 +34,12 @@ public class PlayerInventory : MonoBehaviour
         if (!o) { return; }
 
         Inventory.Remove(o);
+
+        if (HandItem())
+        {
+            handPos = HandItem().transform.localPosition;
+            HandItem().SetActive(true);
+        }
     }
 
     public void AddToInventory(GameObject o)

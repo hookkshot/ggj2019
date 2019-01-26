@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
         var cell = tilemap.SnapToClosestCell(transform);
         Debug.Log(cell + ", " + transform);
-        tileObject.Step(tilemap, rotation);
+        tileObject.MoveToCell(tilemap, new Vector2Int(cell.x,cell.y).Step(rotation));
     }
 
     // Update is called once per frame

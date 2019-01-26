@@ -13,6 +13,7 @@ public class TileObject : MonoBehaviour
     {
         var newPosition = tilemap.GetCellCenterWorld(new Vector3Int(newCell.x, newCell.y, -1));
         if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y))) { return; }
+        if(!tilemap.GetTile(new Vector3Int(newCell.x, newCell.y, 0))) { return; }
 
         transform.position = newPosition;
         cell = newCell;

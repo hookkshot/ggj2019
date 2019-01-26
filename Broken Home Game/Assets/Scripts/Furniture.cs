@@ -2,7 +2,7 @@
 using System.Linq;
 
 [RequireComponent(typeof(TileObject))]
-public class MeetsFengShuiScript : MonoBehaviour
+public class Furniture : MonoBehaviour
 {
     [SerializeField] FurnitureRule[] rules;
     [SerializeField] string[] tags;
@@ -16,6 +16,7 @@ public class MeetsFengShuiScript : MonoBehaviour
     {
         TileObject = GetComponent<TileObject>();
         TileObject.Face(Rotation.NORTH);
+        ZOrdering.SetZOrdering(transform);
     }
 
     public bool HasFengShui()

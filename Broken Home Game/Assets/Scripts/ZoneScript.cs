@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ZoneScript : MonoBehaviour
 {
-    List<MeetsFengShuiScript> furniture;
+    List<Furniture> furniture;
 
     // Start is called before the first frame update
     void Awake()
     {
-        furniture = new List<MeetsFengShuiScript>(GetComponentsInChildren<MeetsFengShuiScript>());
+        furniture = new List<Furniture>(GetComponentsInChildren<Furniture>());
     }
 
     public void OnUpdateLayout() {

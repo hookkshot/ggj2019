@@ -49,6 +49,7 @@ MonoBehaviour:
   rules:
   - {fileID: 11400000, guid: 981b45da35c3546468c1ba49c0d4e671, type: 2}
   tags: []
+  snapToGrid: 1
 --- !u!114 &5915146297757434012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9f213933ff00ed3489c113dc184ffb36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,8 +149,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -430635885
+  m_SortingLayer: 1
   m_SortingOrder: 0
 --- !u!65 &4783878565615051822
 BoxCollider:

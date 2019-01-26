@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Linq;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(TileObject))]

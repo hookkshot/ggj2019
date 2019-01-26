@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class InteractableFurnitureScript : MonoBehaviour
+public class InteractableFurniture : Furniture
 {
     [SerializeField] bool setZOrdering = true;
 

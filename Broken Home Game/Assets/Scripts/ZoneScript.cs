@@ -14,7 +14,7 @@ public class ZoneScript : MonoBehaviour
 
         foreach (var f in furniture)
         {
-            var fn = f.GetComponent<InteractableFurnitureScript>();
+            var fn = f.GetComponent<InteractableFurniture>();
             if (fn) { fn.SetZone(this); }
         }
     }
@@ -32,7 +32,7 @@ public class ZoneScript : MonoBehaviour
         room.OnZoneUpdate();
     }
 
-    public void RemoveFurniture(InteractableFurnitureScript f)
+    public void RemoveFurniture(InteractableFurniture f)
     {
         var fn = f.GetComponent<Furniture>();
 
@@ -46,7 +46,7 @@ public class ZoneScript : MonoBehaviour
         if (f && !furniture.Contains(f)) {
             furniture.Add(f);
 
-            var fn = f.GetComponent<InteractableFurnitureScript>();
+            var fn = f.GetComponent<InteractableFurniture>();
             if (fn) { fn.SetZone(this); }
         }
 

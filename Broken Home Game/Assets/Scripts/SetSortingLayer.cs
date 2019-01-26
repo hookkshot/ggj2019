@@ -23,6 +23,7 @@ public class SetSortingLayer : MonoBehaviour
     {
         foreach (Renderer renderer in _myRenderers)
         {
+            if (!renderer) continue;
             renderer.sortingLayerName = _mySortingLayer;
             renderer.sortingOrder = _mySortingOrderInLayer;
         }

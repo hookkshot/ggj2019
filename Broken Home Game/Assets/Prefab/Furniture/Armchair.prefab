@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7ef02518bd0a5479fef2de82161493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotation: 0
 --- !u!114 &7927960967899577180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +90,7 @@ MonoBehaviour:
   rules: []
   tags: []
   snapToGrid: 1
+  TypeName: Armchair
 --- !u!114 &7927960967899577183
 MonoBehaviour:
   m_ObjectHideFlags: 0

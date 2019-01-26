@@ -16,7 +16,7 @@ public class Furniture : MonoBehaviour
     public TileObject TileObject { get; private set; } = null;
     public string[] FurnitureTags { get => tags; }
 
-    private void Start()
+    private void Awake()
     {
         TileObject = GetComponent<TileObject>();
         if (snapToGrid)

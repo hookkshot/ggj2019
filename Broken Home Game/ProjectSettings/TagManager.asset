@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Effects
+    uniqueID: 1917535491
+    locked: 0
   - name: GamePlay
     uniqueID: 3864331411
     locked: 0

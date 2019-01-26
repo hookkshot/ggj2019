@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         this.tilemap = tilemap;
         tileObject = GetComponent<TileObject>();
-        tileObject.Face(rotation);
+        tileObject.FaceSnap(rotation);
 
         var cell = tilemap.SnapToClosestCell(transform);
         tileObject.MoveToCell(tilemap, new Vector2Int(cell.x,cell.y).Step(rotation));

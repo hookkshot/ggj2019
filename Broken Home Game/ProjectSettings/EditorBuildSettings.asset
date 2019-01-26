@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 724f75d1dcf58d943a44dc8a9dd5af05
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 77dc2e0fb5429494a94676ce37f3702e
-  - enabled: 1
     path: Assets/Scenes/Kitchen.unity
     guid: 408020bf8370b9a42b60c69f1bb35e48
   - enabled: 1
@@ -23,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lounge.unity
     guid: 3aa70b17cf706b04a8a9171f42c4f077
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: e4bdaae6fc5c14445b8a390d2fc8f991
   m_configObjects: {}

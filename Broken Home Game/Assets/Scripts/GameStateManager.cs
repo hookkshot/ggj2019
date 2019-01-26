@@ -71,15 +71,20 @@ public class GameStateManager : MonoBehaviour
     public void EndGame()
     {
         GameUi.SetActive(false);
+        SceneManager.LoadScene("Win");
+    }
+
+    public void MainMenu()
+    {
         SceneManager.LoadScene("Menu");
     }
 
     public void CheckWinConditions()
     {
         var scenes = SceneManager.sceneCountInBuildSettings - 2;
-        var completedGameStates = gameState.Rooms.Where(r => r.Value.Completed);
+        var completedGameStates = gameState.Rooms.Where(r => r.Value.Completed).Count();
 
-        if(completedGameStates.Count() > scenes-1)
+        if(completedGameStates > scenes-1)
         {
             if (currentRoom.IsFengShui)
             {
@@ -92,16 +97,10 @@ public class GameStateManager : MonoBehaviour
     {
         if(currentRoom != null)
         {
+            currentRoom.OnZoneUpdate();
             var roomState = currentRoom.ToState();
-            
-            if(gameState.Rooms.ContainsKey(currentRoom.SceneName))
-            {
-                gameState.Rooms[currentRoom.SceneName] = roomState;
-            }
-            else
-            {
-                gameState.Rooms.Add(currentRoom.SceneName, roomState);
-            }
+            currentRoom.End();
+            gameState.Rooms[currentRoom.SceneName] = roomState;
         }
 
         StartCoroutine(MoveToLevelI(levelName, doorName));
@@ -133,6 +132,10 @@ public class GameStateManager : MonoBehaviour
         playerController.Setup(currentRoom.Tilemap, door.Rotation);
 
         currentRoom.Setup(playerController, roomState);
+        if (roomState == null)
+        {
+            gameState.Rooms.Add(currentRoom.SceneName, new RoomState());
+        }
     }
 }
 

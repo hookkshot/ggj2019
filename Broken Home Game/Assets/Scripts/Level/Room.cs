@@ -22,6 +22,18 @@ public class Room : MonoBehaviour
         zones = GetComponentsInChildren<ZoneScript>();
     }
 
+    private float ghostTimer = 0;
+
+    private void Update()
+    {
+        ghostTimer += Time.deltaTime;
+
+        if (ghostTimer > 20f)
+        {
+
+        }
+    }
+
     public void Setup(PlayerController playerController, RoomState state)
     {
         this.playerController = playerController;
@@ -51,7 +63,7 @@ public class Room : MonoBehaviour
             var furniture = Instantiate(GameStateManager.Instance.GetFurniture(furnitureState.Name));
 
             furniture.TileObject.MoveToCell(Tilemap, furnitureState.Cell);
-            furniture.TileObject.Face(furnitureState.Rotation);
+            furniture.TileObject.FaceSnap(furnitureState.Rotation);
         }
     }
 
@@ -75,8 +87,16 @@ public class Room : MonoBehaviour
         }
 
         state.Completed = IsFengShui;
-
         return state;
+    }
+
+    public void End()
+    {
+        enabled = false;
+        foreach (var zone in zones)
+        {
+            zone.enabled = false;
+        }
     }
 
     public LevelDoor GetDoor(string name)
@@ -95,5 +115,6 @@ public class Room : MonoBehaviour
         }
 
         IsFengShui &= playerInventory.IsInventoryEmpty();
+        GameStateManager.Instance.CheckWinConditions();
     }
 }

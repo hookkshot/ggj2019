@@ -48,8 +48,7 @@ static class ExtensionMethods
     public static Vector3Int SnapToClosestCell(this Tilemap tilemap, Transform transformToSnap)
     {
         Vector3Int gridPosition = tilemap.layoutGrid.WorldToCell(transformToSnap.position);
-        transformToSnap.position = tilemap.layoutGrid.CellToWorld(gridPosition);
-
+        transformToSnap.position = tilemap.layoutGrid.GetCellCenterWorld(gridPosition);
         return gridPosition;
     }
 }

@@ -5,6 +5,13 @@ public class InteractableFurnitureScript : MonoBehaviour
 {
     [SerializeField] bool setZOrdering = true;
 
+    ZoneScript zone;
+
+    public void SetZone(ZoneScript z)
+    {
+        zone = z;
+    }
+
     private void Awake()
     {
         if (setZOrdering)
@@ -24,19 +31,16 @@ public class InteractableFurnitureScript : MonoBehaviour
         {
             ZOrdering.SetZOrdering(gameObject.transform);
         }
-
-        // TODO FIND ZONE
-        // gameObject.GetComponentInParent<ZoneScript>().OnUpdateLayout();
     }
 
     public void Pickup(PlayerInventory player)
     {
-        ZoneScript zoneScript = gameObject.GetComponentInParent<ZoneScript>();
-
-        // TODO find zone
-        //zoneScript.OnUpdateLayout();
-
         player.AddToInventory(gameObject);
+    }
+
+    private void OnDisable()
+    {
+        if (zone) { zone.RemoveFurniture(this); }
     }
 
     public void Rotate()

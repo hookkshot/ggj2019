@@ -18,8 +18,6 @@ public class InteractableFurnitureScript : MonoBehaviour
     {
         player.Drop(gameObject);
 
-        transform.parent = map.transform;
-
         var tileObject = GetComponent<TileObject>();
         tileObject.MoveToCell(map, cell);
 
@@ -36,9 +34,8 @@ public class InteractableFurnitureScript : MonoBehaviour
     {
         ZoneScript zoneScript = gameObject.GetComponentInParent<ZoneScript>();
 
-        transform.parent = player.transform;
-
-        transform.localPosition = (Vector3.up - Vector3.forward) * holdPosition;
+        // TODO lift in air
+        //transform.localPosition = Vector3.forward * holdPosition;
 
         // TODO find zone
         //zoneScript.OnUpdateLayout();

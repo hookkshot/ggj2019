@@ -377,56 +377,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7595645869973041235, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595645869973041235, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595645869973041235, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595645869973041235, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595645869973041235, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104686521263481245, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104686521263481245, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104686521263481245, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104686521263481245, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104686521263481245, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1313198395, guid: 40d46caa7135a9249a401b22d56e812a, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1

@@ -8,7 +8,7 @@ public class ZoneScript : MonoBehaviour
     public bool HasFengShui { get; private set; }
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         furniture = new List<Furniture>(GetComponentsInChildren<Furniture>());
 
@@ -41,6 +41,7 @@ public class ZoneScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (furniture == null) return;
         var f = collision.gameObject.GetComponent<Furniture>();
         if (f && !furniture.Contains(f)) {
             furniture.Add(f);

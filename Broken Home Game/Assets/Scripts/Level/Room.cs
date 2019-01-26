@@ -28,6 +28,12 @@ public class Room : MonoBehaviour
         if(state != null)
         {
             ToState(state);
+
+        }
+
+        foreach (var zone in zones)
+        {
+            zone.OnUpdateLayout();
         }
     }
 

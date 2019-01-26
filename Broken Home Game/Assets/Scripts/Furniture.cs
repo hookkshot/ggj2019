@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Linq;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(TileObject))]
 public class Furniture : MonoBehaviour
 {
     [SerializeField] FurnitureRule[] rules;
     [SerializeField] string[] tags;
+
+    [SerializeField] bool snapToGrid = true;
 
     bool hasFengShui = false;
 
@@ -15,8 +18,11 @@ public class Furniture : MonoBehaviour
     private void Awake()
     {
         TileObject = GetComponent<TileObject>();
-        TileObject.Face(Rotation.NORTH);
-        ZOrdering.SetZOrdering(transform);
+        if (snapToGrid)
+        {
+            Tilemap tilemap = FindObjectOfType<Tilemap>();
+            tilemap.SnapToClosestCell(this.transform);
+        }
     }
 
     public bool HasFengShui()

@@ -229,13 +229,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.92
-  m_fontSizeBase: 18.92
+  m_fontSize: 18
+  m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 257
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
@@ -341,6 +341,159 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bc7538430cb2140b01c9a292fcaf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BounceCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0
+      outSlope: -0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.25669956
+    - serializedVersion: 3
+      time: 0.65816146
+      value: 1.0462956
+      inSlope: 0.020280525
+      outSlope: 0.020280525
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9929199
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  WobbleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0
+      outSlope: -0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.25669956
+    - serializedVersion: 3
+      time: 0.19211386
+      value: 0.9875123
+      inSlope: -0.050222386
+      outSlope: -0.050222386
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.18737869
+    - serializedVersion: 3
+      time: 0.3609603
+      value: 0.7796997
+      inSlope: 0.010765147
+      outSlope: 0.010765147
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50972396
+      value: 1.0339437
+      inSlope: 0.020280525
+      outSlope: 0.020280525
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6766043
+      value: 0.69747007
+      inSlope: 0.01611782
+      outSlope: 0.01611782
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8347168
+      value: 0.9880562
+      inSlope: -0.022618033
+      outSlope: -0.022618033
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1530844
+    - serializedVersion: 3
+      time: 0.9259774
+      value: 0.08474175
+      inSlope: -2.1350641
+      outSlope: -2.1350641
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.51883566
+    - serializedVersion: 3
+      time: 0.9929199
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OverCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.0019683838
+      inSlope: 0.023107227
+      outSlope: 0.023107227
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.10763947
+    - serializedVersion: 3
+      time: 0.63045186
+      value: 1.0444789
+      inSlope: 0.10439563
+      outSlope: 0.10439563
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07740273
+      outWeight: 0.46153277
+    - serializedVersion: 3
+      time: 0.90098757
+      value: 0.99158955
+      inSlope: -0.9158077
+      outSlope: -0.9158077
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.4711516
+    - serializedVersion: 3
+      time: 1
+      value: 1.0019684
+      inSlope: 0.24678735
+      outSlope: 0.24678735
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4996408
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   gameLevels:
   - Lounge
   - Kitchen

@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
+using System.Linq;
 
 public class Room : MonoBehaviour
 {
@@ -28,9 +29,15 @@ public class Room : MonoBehaviour
     {
         ghostTimer += Time.deltaTime;
 
-        if (ghostTimer > 20f)
+        if (ghostTimer > 15f)
         {
-
+            var furnitures = FindObjectsOfType<InteractableFurniture>().Where(f => !f.HasFengShui());
+            if(furnitures.Count() >0)
+            {
+                var f = furnitures.ToList()[Random.Range(0, furnitures.Count())];
+                f.Wobble();
+            }
+            ghostTimer = 0;
         }
     }
 

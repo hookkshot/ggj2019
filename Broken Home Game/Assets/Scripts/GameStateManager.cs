@@ -12,6 +12,10 @@ public class GameStateManager : MonoBehaviour
     {
         get { return _instance; }
     }
+    
+    public AnimationCurve BounceCurve;
+    public AnimationCurve WobbleCurve;
+    public AnimationCurve OverCurve;
 
     [SerializeField]
     private string[] gameLevels;
@@ -34,6 +38,8 @@ public class GameStateManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI roomText;
 
+    [SerializeField]
+    private GameObject[] effects;
 
     private bool sceneHasLoaded;
 
@@ -55,6 +61,11 @@ public class GameStateManager : MonoBehaviour
     public Furniture GetFurniture(string name)
     {
         return FurniturePrefabs.FirstOrDefault(f => f.TypeName == name);
+    }
+
+    public GameObject GetEffect(string name)
+    {
+        return effects.FirstOrDefault(g => g.name.Equals(name, System.StringComparison.InvariantCultureIgnoreCase));
     }
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)

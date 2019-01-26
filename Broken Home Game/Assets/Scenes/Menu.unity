@@ -566,32 +566,107 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[1].inSlope
+      value: 0.10439563
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[1].outSlope
+      value: 0.10439563
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[1].inWeight
+      value: 0.07740273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[0].value
+      value: 0.0019683838
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[1].value
+      value: 1.1614299
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[2].value
+      value: 0.99158955
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[2].time
+      value: 0.90098757
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[2].inSlope
+      value: -0.9158077
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[2].outSlope
+      value: -0.9158077
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[2].outWeight
+      value: 0.4711516
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[3].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[3].value
+      value: 1.0019684
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[3].inSlope
+      value: 0.24678735
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[3].outSlope
+      value: 0.24678735
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[3].inWeight
+      value: 0.4996408
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[1].time
+      value: 0.7784011
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
+        type: 3}
+      propertyPath: OverCurve.m_Curve.Array.data[1].outWeight
+      value: 0.46153277
+      objectReference: {fileID: 0}
     - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
-      propertyPath: m_enableAutoSizing
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

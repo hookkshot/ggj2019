@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         tileObject = gameObject.GetComponentInChildren<TileObject>();
+        tileObject.Face(tileObject.GetRotation());
+        tilemap.SnapToClosestCell(transform);
     }
 
     // Update is called once per frame

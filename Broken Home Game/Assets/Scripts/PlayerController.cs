@@ -10,10 +10,6 @@ public class PlayerController : MonoBehaviour
     private BoundsInt currentBounds;
     private TileObject tileObject;
 
-    void Awake()
-    {   
-    }
-
     public void Setup(Tilemap tilemap, Rotation rotation)
     {
         this.tilemap = tilemap;
@@ -21,7 +17,7 @@ public class PlayerController : MonoBehaviour
         tileObject.FaceSnap(rotation);
 
         var cell = tilemap.SnapToClosestCell(transform);
-        tileObject.MoveToCell(tilemap, new Vector2Int(cell.x,cell.y).Step(rotation));
+        tileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y).Step(rotation));
     }
 
     // Update is called once per frame
@@ -75,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Interact();            
+            Interact();
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
@@ -95,6 +91,7 @@ public class PlayerController : MonoBehaviour
         {
             var handFurniture = handItem.GetComponent<InteractableFurniture>();
             handFurniture.Place(inventory, tilemap, cellPoint);
+            handFurniture.SetResetValues();
 
             return;
         }

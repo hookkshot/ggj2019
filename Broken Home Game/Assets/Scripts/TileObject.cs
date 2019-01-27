@@ -34,6 +34,18 @@ public class TileObject : MonoBehaviour
         ZOrdering.SetZOrdering(transform);
     }
 
+    public void MoveToCellNoCollisions(Tilemap tilemap, Vector2Int newCell)
+    {
+        if (isMoving || isRotating) return;
+        var newPosition = tilemap.GetCellCenterWorld(new Vector3Int(newCell.x, newCell.y, -1));
+        if (!tilemap.GetTile(new Vector3Int(newCell.x, newCell.y, 0))) { return; }
+
+        transform.position = newPosition;
+        cell = newCell;
+
+        ZOrdering.SetZOrdering(transform);
+    }
+
     public void MoveToCellTween(Tilemap tilemap, Vector2Int newCell)
     {
         if (isMoving || isRotating) return;

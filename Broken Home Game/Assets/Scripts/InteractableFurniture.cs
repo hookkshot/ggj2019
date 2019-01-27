@@ -22,12 +22,6 @@ public class InteractableFurniture : Furniture
         if (Zone) { Zone.OnUpdateLayout(); }
     }
 
-    //private void Update()
-    //{
-    //    if(Input.GetKeyDown(KeyCode.P))
-    //        Wobble();
-    //}
-
     public void Wobble()
     {
         if (inUse || wobbling) return;

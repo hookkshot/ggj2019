@@ -3,21 +3,8 @@ using UnityEngine;
 
 public class ZoneScript : MonoBehaviour
 {
-    public List<Furniture> Furniture { get; private set; }
+    public List<Furniture> Furniture { get; private set; } = new List<Furniture>();
     public bool HasFengShui { get; private set; }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Furniture = new List<Furniture>(FindObjectsOfType<Furniture>());
-
-        foreach (var f in Furniture)
-        {
-            f.Zone = this;
-        }
-
-        OnUpdateLayout();
-    }
 
     public void OnUpdateLayout()
     {

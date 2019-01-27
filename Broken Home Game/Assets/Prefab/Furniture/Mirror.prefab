@@ -88,6 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - {fileID: 11400000, guid: 2ec9ff28c526b9940a2d9b931d664ec3, type: 2}
+  - {fileID: 11400000, guid: cd81a4045d198e1478b037780bcf9f43, type: 2}
   tags:
   - Mirror
   snapToGrid: 1

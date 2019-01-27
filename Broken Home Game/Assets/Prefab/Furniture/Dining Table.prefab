@@ -86,11 +86,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1151e8eace7c7674cbb101f18a0d2ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rules: []
-  tags: []
+  rules:
+  - {fileID: 11400000, guid: dfa6e9dbd70598041ab7407faa0e0fa2, type: 2}
+  - {fileID: 11400000, guid: 47aa28d895edd8d4284e49768de2ee74, type: 2}
+  - {fileID: 11400000, guid: 78e6f48c479948141843517507c9558d, type: 2}
+  tags:
+  - Table
   snapToGrid: 1
   TypeName: DiningTable
-  setZOrdering: 1
 --- !u!50 &8267343290027933346
 Rigidbody2D:
   serializedVersion: 4
@@ -169,15 +172,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d3893dce94c1e3340831f1f248d72c7d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d3893dce94c1e3340831f1f248d72c7d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d3893dce94c1e3340831f1f248d72c7d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3893dce94c1e3340831f1f248d72c7d, type: 3}

@@ -49,11 +49,11 @@ public class PlayerController : MonoBehaviour
             {
                 tileObject.RotateLeft();
             }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow))
             {
                 tileObject.Step(tilemap, tileObject.GetRotation());
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow))
             {
                 tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
             }

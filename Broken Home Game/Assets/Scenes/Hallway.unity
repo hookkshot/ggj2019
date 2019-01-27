@@ -516,6 +516,11 @@ PrefabInstance:
       propertyPath: Rotation
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3773248604113836264, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: rotation
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22419effe33e771428a2dd4faf3846a6, type: 3}
 --- !u!114 &1135732708 stripped
@@ -693,6 +698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e54a2d14b15eb0489f2e8b0397a05b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _postProcessingProfile: {fileID: 0}
+  startBloomColor: {r: 1, g: 1, b: 1, a: 1}
+  endBloomColor: {r: 0, g: 0.5, b: 0, a: 1}
 --- !u!1 &1890964532
 GameObject:
   m_ObjectHideFlags: 0

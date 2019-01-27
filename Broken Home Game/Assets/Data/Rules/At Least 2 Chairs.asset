@@ -15,4 +15,4 @@ MonoBehaviour:
   _affectedTag: Chair
   _distanceInGridSpaces: 1
   _numberOfObjects: 2
-  _distanceCheckType: 2
+  _distanceCheckType: 0

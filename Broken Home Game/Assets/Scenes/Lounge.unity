@@ -263,6 +263,11 @@ PrefabInstance:
       propertyPath: DoorConnection
       value: LoungeDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 3773248604113836264, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: rotation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22419effe33e771428a2dd4faf3846a6, type: 3}
 --- !u!114 &165208938 stripped
@@ -591,6 +596,11 @@ PrefabInstance:
     - target: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
         type: 3}
       propertyPath: Rotation
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773248604113836264, guid: 22419effe33e771428a2dd4faf3846a6,
+        type: 3}
+      propertyPath: rotation
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []

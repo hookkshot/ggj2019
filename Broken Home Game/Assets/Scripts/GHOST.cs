@@ -1,14 +1,21 @@
 ﻿using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GHOST : MonoBehaviour
 {
     const float GHOST_MIN_TIME = 5;
     const float GHOST_MAX_TIME = 15;
 
+    [SerializeField] PostProcessVolume _postProcessingProfile = null;
+
+    Grain grain = null;
+
     private void Start()
     {
+        _postProcessingProfile = FindObjectOfType<PostProcessVolume>();
+        grain = _postProcessingProfile.profile.GetSetting<Grain>();
         StartCoroutine(GhostTimer());
     }
 
@@ -37,7 +44,23 @@ public class GHOST : MonoBehaviour
         var target = badFurniture[Random.Range(0, badFurniture.Count)];
 
         target.Wobble();
+        StartCoroutine(FuckWithPlayerScreen());
         AudioManager.Instance.PlayBadSound();
+    }
+
+    IEnumerator FuckWithPlayerScreen()
+    {
+        float time = 0;
+
+        while (time < 1f)
+        {
+            yield return 0;
+            time += Time.deltaTime;
+
+            var d = time / 1f;
+
+            grain.intensity.value = GameStateManager.Instance.GrainCurve.Evaluate(d);
+        }
     }
 
     IEnumerator GhostTimer()

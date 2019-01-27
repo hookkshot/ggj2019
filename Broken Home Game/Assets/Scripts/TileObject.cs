@@ -16,6 +16,11 @@ public class TileObject : MonoBehaviour
     private bool isMoving = false;
     private bool isRotating = false;
 
+    public bool IsTweening()
+    {
+        return isMoving || isRotating;
+    }
+
     public void MoveToCell(Tilemap tilemap, Vector2Int newCell)
     {
         if (isMoving || isRotating) return;

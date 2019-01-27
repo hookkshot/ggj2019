@@ -57,7 +57,13 @@ public class PlayerInventory : MonoBehaviour
     public void SpinInventory()
     {
         var first = HandItem();
-        if (first) { first.transform.localPosition = handPos; }
+        if (first)
+        {
+            var tileObject = first.GetComponent<TileObject>();
+            if (tileObject.IsTweening()) { return; }
+
+            first.transform.localPosition = handPos;
+        }
 
         Inventory.RemoveAt(0);
         Inventory.Add(first);

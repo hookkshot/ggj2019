@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _affectedTag: Fridge
   _distanceInGridSpaces: 3
+  _checkType: 1

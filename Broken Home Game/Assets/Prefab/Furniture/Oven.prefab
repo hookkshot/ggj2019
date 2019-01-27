@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rules:
-  - {fileID: 11400000, guid: 166151a85a19e054a9e3de896311dce9, type: 2}
+  - {fileID: 11400000, guid: 82b123d3cfd555f4b9bdc7c1e24153c1, type: 2}
   tags:
   - Oven
   snapToGrid: 1

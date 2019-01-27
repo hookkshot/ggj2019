@@ -15,6 +15,7 @@ public class InteractableFurniture : Furniture
         player.Drop(gameObject);
 
         TileObject.MoveToCell(map, cell);
+        TileObject.SetCell(map);
 
         ZOrdering.SetZOrdering(gameObject.transform);
 

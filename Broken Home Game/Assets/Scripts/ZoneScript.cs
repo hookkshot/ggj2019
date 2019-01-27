@@ -23,6 +23,7 @@ public class ZoneScript : MonoBehaviour
     public void RemoveFurniture(Furniture f)
     {
         Furniture.Remove(f);
+        OnUpdateLayout();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

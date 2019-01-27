@@ -67,4 +67,41 @@ public class Furniture : MonoBehaviour
     {
         return FurnitureTags.Intersect(tags).Any();
     }
+
+    #region testing
+    [ContextMenu("Test FengShui")]
+    public void TestFungShui()
+    {
+        if (Zone == null)
+        {
+            Zone = FindObjectOfType<ZoneScript>();
+        }
+
+        UpdateFengShui();
+
+        if (hasFengShui == false)
+        {
+            GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+        }
+        else
+        {
+            GetComponentInChildren<MeshRenderer>().material.color = Color.white;
+        }
+    }
+    [ContextMenu("Set Test Position")]
+    public void SetTestPosition()
+    {
+        Tilemap tilemap = FindObjectOfType<Tilemap>();
+
+        var cell = tilemap.SnapToClosestCell(transform);
+        if (TileObject)
+        {
+            TileObject.SetCell(tilemap);
+            TileObject.FaceSnap(TileObject.GetRotation());
+            SetResetValues();
+        }
+
+        ZOrdering.SetZOrdering(gameObject.transform);
+    }
+    #endregion
 }

@@ -5,8 +5,8 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class GHOST : MonoBehaviour
 {
-    const float GHOST_MIN_TIME = 5;
-    const float GHOST_MAX_TIME = 15;
+    const float GHOST_MIN_TIME = 4;
+    const float GHOST_MAX_TIME = 10;
 
     [SerializeField] PostProcessVolume _postProcessingProfile = null;
     [SerializeField] Color startBloomColor = Color.white;
@@ -45,9 +45,12 @@ public class GHOST : MonoBehaviour
 
         var target = badFurniture[Random.Range(0, badFurniture.Count)];
 
-        target.Wobble();
-        StartCoroutine(FuckWithPlayerScreen());
-        AudioManager.Instance.PlayBadSound();
+        if (target.InUse == false)
+        {
+            target.Wobble();
+            StartCoroutine(FuckWithPlayerScreen());
+            AudioManager.Instance.PlayBadSound();
+        }
     }
 
     IEnumerator FuckWithPlayerScreen()

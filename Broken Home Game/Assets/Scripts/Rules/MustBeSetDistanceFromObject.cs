@@ -4,8 +4,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Furniture Rules/MustBeSetDistanceFromObject")]
 public class MustBeSetDistanceFromObject : FurnitureRule
 {
+    public enum CheckType
+    {
+        Equals,
+        NotEquals,
+        GreaterThan,
+        LessThan
+    }
+
     [SerializeField] string _affectedTag = null;
     [SerializeField] int _distanceInGridSpaces = 3;
+    [SerializeField] CheckType _checkType = CheckType.NotEquals;
 
     public override bool Passes(Furniture checkingObject)
     {
@@ -20,10 +29,29 @@ public class MustBeSetDistanceFromObject : FurnitureRule
 
             if (furniture.HasAnyTags(new string[] { _affectedTag }))
             {
-                Vector2Int a = furniture.TileObject.Cell;
-                Vector2Int b = checkingObject.TileObject.Cell;
+                float distance = Mathf.CeilToInt(Vector2Int.Distance(furniture.TileObject.Cell, checkingObject.TileObject.Cell));
+                bool failed = false;
 
-                if (Mathf.CeilToInt(Vector2Int.Distance(a, b)) != _distanceInGridSpaces)
+                switch(_checkType)
+                {
+                    case CheckType.NotEquals:
+                        failed = distance != _distanceInGridSpaces;
+                        break;
+
+                    case CheckType.LessThan:
+                        failed = distance < _distanceInGridSpaces;
+                        break;
+
+                    case CheckType.GreaterThan:
+                        failed = distance > _distanceInGridSpaces;
+                        break;
+
+                    case CheckType.Equals:
+                        failed = distance == _distanceInGridSpaces;
+                        break;
+                }
+
+                if(failed)
                 {
                     return false;
                 }

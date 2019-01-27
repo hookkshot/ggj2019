@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: MustBeAtLeast4SpacesFromLightsource
-  m_EditorClassIdentifier: Assembly-CSharp::MustBeSetDistanceFromObject
-  _affectedTag: Lightsource
-  _distanceInGridSpaces: 5
-  _checkType: 3
+  m_Script: {fileID: 11500000, guid: 821261f3880e81f468a4928f6a6b2ec0, type: 3}
+  m_Name: MustFaceSouth
+  m_EditorClassIdentifier: 
+  _direction: 2

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: fa36afe353420c14d9aa5741fd163b67, type: 3}
   m_Name: NotNextToDoor
-  m_EditorClassIdentifier: Assembly-CSharp::MustBeSetDistanceFromObject
-  _affectedTag: Doorway
+  m_EditorClassIdentifier: 
+  _affectedTag: Door
   _distanceInGridSpaces: 1
-  _checkType: 2
+  _numberOfObjects: 2
+  _distanceCheckType: 2

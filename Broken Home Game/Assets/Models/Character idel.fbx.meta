@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: bce85ad5cbda7694881629e5b768dcb8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: armchair
+    100004: Back
+    100006: Chair
+    100008: Character
+    100010: //RootNode
+    100012: Cube
+    100014: entertainment unit
+    100016: Fridge
+    100018: Head
+    100020: Head_end
+    100022: L_arm
+    100024: L_clavical
+    100026: L_elbow
+    100028: L_fingers
+    100030: L_fingers_end
+    100032: L_foot
+    100034: L_hand
+    100036: L_hip
+    100038: L_knee
+    100040: L_leg
+    100042: L_sholder
+    100044: L_thumb1
+    100046: L_thumb2
+    100048: L_thumb2_end
+    100050: L_toe
+    100052: L_toe_end
+    100054: Lamp
+    100056: Mirror
+    100058: Neck
+    100060: R_arm
+    100062: R_clavical
+    100064: R_elbow
+    100066: R_fingers
+    100068: R_fingers_end
+    100070: R_foot
+    100072: R_hand
+    100074: R_hip
+    100076: R_knee
+    100078: R_leg
+    100080: R_sholder
+    100082: R_thumb1
+    100084: R_thumb2
+    100086: R_thumb2_end
+    100088: R_toe
+    100090: R_toe_end
+    100092: Root
+    100094: Table
+    400000: Armature
+    400002: armchair
+    400004: Back
+    400006: Chair
+    400008: Character
+    400010: //RootNode
+    400012: Cube
+    400014: entertainment unit
+    400016: Fridge
+    400018: Head
+    400020: Head_end
+    400022: L_arm
+    400024: L_clavical
+    400026: L_elbow
+    400028: L_fingers
+    400030: L_fingers_end
+    400032: L_foot
+    400034: L_hand
+    400036: L_hip
+    400038: L_knee
+    400040: L_leg
+    400042: L_sholder
+    400044: L_thumb1
+    400046: L_thumb2
+    400048: L_thumb2_end
+    400050: L_toe
+    400052: L_toe_end
+    400054: Lamp
+    400056: Mirror
+    400058: Neck
+    400060: R_arm
+    400062: R_clavical
+    400064: R_elbow
+    400066: R_fingers
+    400068: R_fingers_end
+    400070: R_foot
+    400072: R_hand
+    400074: R_hip
+    400076: R_knee
+    400078: R_leg
+    400080: R_sholder
+    400082: R_thumb1
+    400084: R_thumb2
+    400086: R_thumb2_end
+    400088: R_toe
+    400090: R_toe_end
+    400092: Root
+    400094: Table
+    2100000: Material.011
+    2100002: light metal
+    2100004: Material
+    2100006: grey
+    2100008: dark wood 2
+    2100010: dark wood
+    2100012: dark grey
+    2100014: Material.005
+    2100016: black
+    2100018: Material.008
+    2100020: Material.009
+    2100022: Skin
+    2100024: Material.002
+    2100026: Material.007
+    2100028: Material.003
+    2100030: Material.004
+    2100032: eyes
+    2100034: Hair
+    2100036: Material.010
+    2100038: Material.006
+    2100040: Material.012
+    2100042: Material.001
+    2100044: Material.014
+    2100046: dark metal
+    2100048: Metal shadow
+    2300000: armchair
+    2300002: Chair
+    2300004: Cube
+    2300006: entertainment unit
+    2300008: Fridge
+    2300010: Lamp
+    2300012: Mirror
+    2300014: Table
+    3300000: armchair
+    3300002: Chair
+    3300004: Cube
+    3300006: entertainment unit
+    3300008: Fridge
+    3300010: Lamp
+    3300012: Mirror
+    3300014: Table
+    4300000: Cube
+    4300002: entertainment unit
+    4300004: Lamp
+    4300006: Character
+    4300008: Table
+    4300010: Chair
+    4300012: Fridge
+    4300014: Mirror
+    4300016: armchair
+    7400000: Idle
+    9500000: //RootNode
+    13700000: Character
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

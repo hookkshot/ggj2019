@@ -4,12 +4,14 @@ using UnityEngine.Tilemaps;
 
 public class InteractableFurniture : Furniture
 {
-    private bool inUse;
+    private bool inUse = false;
     bool wobbling = false;
+
+    public bool InUse { get => inUse; }
 
     public void Place(PlayerInventory player, Tilemap map, Vector2Int cell)
     {
-        if (inUse) return;
+        inUse = false;
         player.Drop(gameObject);
 
         TileObject.MoveToCell(map, cell);
@@ -34,7 +36,6 @@ public class InteractableFurniture : Furniture
 
     private IEnumerator WobbleI()
     {
-        inUse = false;
         var t = transform.GetChild(0);
         var pFrom = t.position;
         var rFrom = t.eulerAngles;
@@ -67,7 +68,6 @@ public class InteractableFurniture : Furniture
         t.eulerAngles = rFrom;
         t.localScale = sFrom;
 
-        inUse = false;
         wobbling = false;
     }
 
@@ -78,6 +78,7 @@ public class InteractableFurniture : Furniture
             return;
         }
 
+        inUse = true;
         player.AddToInventory(gameObject);
     }
 

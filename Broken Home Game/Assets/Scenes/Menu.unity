@@ -1091,30 +1091,30 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 630789095599609629, guid: 40d46caa7135a9249a401b22d56e812a,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630789095599609629, guid: 40d46caa7135a9249a401b22d56e812a,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489305800441975569, guid: 40d46caa7135a9249a401b22d56e812a,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489305800441975569, guid: 40d46caa7135a9249a401b22d56e812a,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2273422166516035807, guid: 40d46caa7135a9249a401b22d56e812a,
         type: 3}
       propertyPath: m_Transition
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 630789095599609629, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 630789095599609629, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5489305800441975569, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5489305800441975569, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
         type: 3}
@@ -3231,6 +3231,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
         type: 3}
       propertyPath: OverCurve.m_Curve.Array.size
@@ -3325,14 +3333,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OverCurve.m_Curve.Array.data[1].outWeight
       value: 0.46153277
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}

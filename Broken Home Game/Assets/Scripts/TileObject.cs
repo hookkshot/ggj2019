@@ -5,16 +5,16 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(SetSortingLayer))]
 public class TileObject : MonoBehaviour
 {
-    Vector2Int cell;
-
-    [SerializeField]
-    Rotation rotation = Rotation.NORTH;
+    [SerializeField] Rotation rotation = Rotation.NORTH;
+    [SerializeField] Animator _animator = null;
 
     public Vector2Int Cell { get { return cell; } }
     public Rotation GetRotation() { return rotation; }
 
     private bool isMoving = false;
     private bool isRotating = false;
+
+    Vector2Int cell;
 
     public bool IsTweening()
     {
@@ -46,6 +46,11 @@ public class TileObject : MonoBehaviour
 
     public IEnumerator MoveToPositionI(Vector3 position, Vector2Int newCell)
     {
+        if(_animator != null)
+        {
+            _animator.SetBool("IsWalking", true);
+        }
+
         isMoving = true;
         var from = transform.position;
 
@@ -64,6 +69,11 @@ public class TileObject : MonoBehaviour
         cell = newCell;
         ZOrdering.SetZOrdering(transform);
         isMoving = false;
+
+        if (_animator != null)
+        {
+            _animator.SetBool("IsWalking", false);
+        }
     }
 
     public void SetCell(Tilemap tilemap)

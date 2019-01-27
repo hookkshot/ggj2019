@@ -4,8 +4,7 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(TileObject), typeof(PlayerInventory))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private Tilemap tilemap;
+    [SerializeField] Tilemap tilemap;
 
     private BoundsInt currentBounds;
     private TileObject tileObject;

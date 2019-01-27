@@ -9,13 +9,17 @@ public class GHOST : MonoBehaviour
     const float GHOST_MAX_TIME = 15;
 
     [SerializeField] PostProcessVolume _postProcessingProfile = null;
+    [SerializeField] Color startBloomColor = Color.white;
+    [SerializeField] Color endBloomColor = new Color(0f, 0.5f, 0f);
 
     Grain grain = null;
+    Bloom bloom = null;
 
     private void Start()
     {
         _postProcessingProfile = FindObjectOfType<PostProcessVolume>();
         grain = _postProcessingProfile.profile.GetSetting<Grain>();
+        bloom = _postProcessingProfile.profile.GetSetting<Bloom>();
         StartCoroutine(GhostTimer());
     }
 
@@ -58,6 +62,8 @@ public class GHOST : MonoBehaviour
             var d = time / 1f;
 
             grain.intensity.value = GameStateManager.Instance.GrainCurve.Evaluate(d);
+            bloom.intensity.value = GameStateManager.Instance.BloomCurve.Evaluate(d);
+            bloom.color.value = Color.Lerp(startBloomColor, endBloomColor, d);
         }
     }
 

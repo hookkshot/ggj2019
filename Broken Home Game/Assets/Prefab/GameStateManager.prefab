@@ -632,6 +632,57 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  BloomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.75
+      inSlope: 0.6186533
+      outSlope: 0.6186533
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.2079241
+    - serializedVersion: 3
+      time: 0.20039365
+      value: 0.8169455
+      inSlope: 0.6394759
+      outSlope: 1.9044603
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.20649381
+      outWeight: 0.086965986
+    - serializedVersion: 3
+      time: 0.5
+      value: 2.3
+      inSlope: -0.003329374
+      outSlope: -0.003329374
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.16198325
+    - serializedVersion: 3
+      time: 0.78184104
+      value: 0.8187484
+      inSlope: -1.9898769
+      outSlope: -1.0281757
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.10694092
+      outWeight: 0.22348137
+    - serializedVersion: 3
+      time: 1
+      value: 0.75
+      inSlope: -0.40880236
+      outSlope: -0.40880236
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.19957836
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   gameLevels:
   - Lounge
   - Kitchen

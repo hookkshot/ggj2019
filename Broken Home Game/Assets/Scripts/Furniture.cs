@@ -65,11 +65,13 @@ public class Furniture : MonoBehaviour
 #if UNITY_EDITOR
         if (hasFengShui == false)
         {
-            GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+            if (GetComponentInChildren<MeshRenderer>() != null)
+                GetComponentInChildren<MeshRenderer>().material.color = Color.red;
         }
         else
         {
-            GetComponentInChildren<MeshRenderer>().material.color = Color.white;
+            if (GetComponentInChildren<MeshRenderer>() != null)
+                GetComponentInChildren<MeshRenderer>().material.color = Color.white;
         }
 #endif
     }

@@ -1,25 +1,19 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Furniture Rules/MustBeSetDistanceFromObject")]
-public class MustBeSetDistanceFromObject : FurnitureRule
+[CreateAssetMenu(menuName = "Furniture Rules/MustHaveAtLeastNumberOfObjects")]
+public class MustHaveAtLeastNumberOfObjects : FurnitureRule
 {
-    public enum CheckType
-    {
-        Equals,
-        NotEquals,
-        GreaterThan,
-        LessThan
-    }
-
     [SerializeField] string _affectedTag = null;
-    [SerializeField] int _distanceInGridSpaces = 3;
-    [SerializeField] CheckType _checkType = CheckType.NotEquals;
+    [SerializeField] int _distanceInGridSpaces = 1;
+    [SerializeField] int _numberOfObjects = 2;
+    [SerializeField] CheckType _distanceCheckType = CheckType.GreaterThan;
 
     public override bool Passes(Furniture checkingObject)
     {
         List<Furniture> furnitureInZone = checkingObject.Zone.Furniture;
 
+        int count = 0;
         foreach (Furniture furniture in furnitureInZone)
         {
             if (furniture == checkingObject)
@@ -32,7 +26,7 @@ public class MustBeSetDistanceFromObject : FurnitureRule
                 float distance = Mathf.CeilToInt(Vector2Int.Distance(furniture.TileObject.Cell, checkingObject.TileObject.Cell));
                 bool failed = false;
 
-                switch(_checkType)
+                switch (_distanceCheckType)
                 {
                     case CheckType.NotEquals:
                         failed = distance != _distanceInGridSpaces;
@@ -51,13 +45,13 @@ public class MustBeSetDistanceFromObject : FurnitureRule
                         break;
                 }
 
-                if(failed)
+                if (!failed)
                 {
-                    return false;
+                    count++;
                 }
             }
         }
 
-        return true;
+        return (count >= _numberOfObjects);
     }
 }

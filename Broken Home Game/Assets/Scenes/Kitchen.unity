@@ -1101,7 +1101,7 @@ PrefabInstance:
     - target: {fileID: 3212104477784631026, guid: b41a28fabf2c798429b4c3e071940a1c,
         type: 3}
       propertyPath: rules.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b41a28fabf2c798429b4c3e071940a1c, type: 3}

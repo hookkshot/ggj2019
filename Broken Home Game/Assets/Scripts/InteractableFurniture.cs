@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 public class InteractableFurniture : Furniture
 {
     private bool inUse;
+    bool wobbling = false;
 
     public void Place(PlayerInventory player, Tilemap map, Vector2Int cell)
     {
@@ -19,15 +20,16 @@ public class InteractableFurniture : Furniture
         if (Zone) { Zone.OnUpdateLayout(); }
     }
 
-    private void Update()
-    {
-        //if(Input.GetKeyDown(KeyCode.P))
-        //    Wobble();
-    }
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.P))
+    //        Wobble();
+    //}
 
     public void Wobble()
     {
-        if (inUse) return;
+        if (inUse || wobbling) return;
+        wobbling = true;
         StartCoroutine(WobbleI());
     }
 
@@ -67,10 +69,16 @@ public class InteractableFurniture : Furniture
         t.localScale = sFrom;
 
         inUse = false;
+        wobbling = false;
     }
 
     public void Pickup(PlayerInventory player)
     {
+        if(wobbling)
+        {
+            return;
+        }
+
         player.AddToInventory(gameObject);
     }
 

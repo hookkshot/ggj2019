@@ -88,9 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rules:
-  - {fileID: 11400000, guid: 78e6f48c479948141843517507c9558d, type: 2}
   - {fileID: 11400000, guid: b193b198eaffb0147b28119ec3762742, type: 2}
-  - {fileID: 11400000, guid: 78e6f48c479948141843517507c9558d, type: 2}
   tags:
   - Fridge
   snapToGrid: 1

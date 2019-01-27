@@ -575,6 +575,7 @@ MonoBehaviour:
   doors:
   - {fileID: 533107408}
   - {fileID: 857788020}
+  - {fileID: 1679689518}
   Tilemap: {fileID: 1890964535}
 --- !u!4 &556633904
 Transform:
@@ -1269,6 +1270,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1679689516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679689518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5431907974575968276, guid: 22419effe33e771428a2dd4faf3846a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679689516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f4a73f021bfe542950a644507b4623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1890964532
 GameObject:
   m_ObjectHideFlags: 0

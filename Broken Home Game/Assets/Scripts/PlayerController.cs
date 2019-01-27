@@ -56,6 +56,10 @@ public class PlayerController : MonoBehaviour
             {
                 tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
             }
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
 
             var cellPoint = tileObject.Cell.Step(tileObject.GetRotation());
             var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y, 0));

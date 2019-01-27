@@ -266,7 +266,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 26.15
+  m_fontSize: 34.05
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -594,6 +594,15 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 1
     - serializedVersion: 3
+      time: 0.20719637
+      value: 0.7654722
+      inSlope: 2.4566786
+      outSlope: 2.4566786
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 0.5
       value: 1
       inSlope: -0.003329374
@@ -602,6 +611,15 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.16198325
+    - serializedVersion: 3
+      time: 0.7741838
+      value: 0.78565836
+      inSlope: -2.3928914
+      outSlope: -2.3928914
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 0
@@ -628,8 +646,7 @@ MonoBehaviour:
   - {fileID: 3212104477784631026, guid: b41a28fabf2c798429b4c3e071940a1c, type: 3}
   GameUi: {fileID: 1325234426}
   roomText: {fileID: 1582779106}
-  effects:
-  - {fileID: 8997550273455046581, guid: a57f358fff5cf934a87123499bbedb05, type: 3}
+  effects: []
 --- !u!114 &5090903773841607154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
         if (!collider) { return; }
 
         var door = collider.GetComponent<LevelDoor>();
-        if (door)
+        if (door && inventory.IsInventoryEmpty())
         {
             GameStateManager.Instance.MoveToLevel(door.SceneConnection, door.DoorConnection);
         }

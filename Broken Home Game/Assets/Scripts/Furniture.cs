@@ -61,6 +61,19 @@ public class Furniture : MonoBehaviour
     public void UpdateFengShui()
     {
         hasFengShui = rules.All(f => f.Passes(this));
+
+#if UNITY_EDITOR
+        if (hasFengShui == false)
+        {
+            if (GetComponentInChildren<MeshRenderer>() != null)
+                GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+        }
+        else
+        {
+            if (GetComponentInChildren<MeshRenderer>() != null)
+                GetComponentInChildren<MeshRenderer>().material.color = Color.white;
+        }
+#endif
     }
 
     public bool HasAnyTags(string[] tags)

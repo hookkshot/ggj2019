@@ -18,12 +18,6 @@ public class GHOST : MonoBehaviour
         var badFurniture = furniture.Where(f => !f.HasFengShui()).ToList();
 
         var target = badFurniture[Random.Range(0, badFurniture.Count)];
-        FuckWithThisFurnitureInParticular(target);
-    }
-
-    void FuckWithThisFurnitureInParticular(Furniture f)
-    {
-        f.GetComponent<TileObject>().Face(Rotation.ASKEW);
     }
 
     IEnumerator GhostTimer()

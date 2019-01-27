@@ -9,7 +9,7 @@ public class ZoneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Furniture = new List<Furniture>(GetComponentsInChildren<Furniture>());
+        Furniture = new List<Furniture>(FindObjectsOfType<Furniture>());
 
         foreach (var f in Furniture)
         {
@@ -19,7 +19,8 @@ public class ZoneScript : MonoBehaviour
         OnUpdateLayout();
     }
 
-    public void OnUpdateLayout() {
+    public void OnUpdateLayout()
+    {
         HasFengShui = true;
 
         foreach (var script in Furniture)
@@ -41,7 +42,8 @@ public class ZoneScript : MonoBehaviour
     {
         if (Furniture == null) return;
         var f = collision.gameObject.GetComponent<Furniture>();
-        if (f && !Furniture.Contains(f)) {
+        if (f && !Furniture.Contains(f))
+        {
             Furniture.Add(f);
             f.Zone = this;
         }

@@ -6,8 +6,8 @@ public enum Rotation
     NORTH,
     EAST,
     SOUTH,
-    WEST,
-    ASKEW
+    WEST/*,
+    ASKEW*/
 }
 
 static class ExtensionMethods
@@ -36,12 +36,12 @@ static class ExtensionMethods
             case Rotation.WEST: return Rotation.SOUTH;
         }
 
-        return Rotation.ASKEW;
+        // This shouldn't happen
+        return Rotation.NORTH;
     }
 
     public static Rotation RotateRight(this Rotation rotation)
     {
-
         return rotation.RotateLeft().RotateLeft().RotateLeft();
     }
 

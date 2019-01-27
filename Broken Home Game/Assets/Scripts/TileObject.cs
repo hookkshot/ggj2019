@@ -93,7 +93,6 @@ public class TileObject : MonoBehaviour
             case Rotation.EAST: to = rotationOffset * Quaternion.AngleAxis(270, Vector3.forward); break;
             case Rotation.SOUTH: to = rotationOffset * Quaternion.AngleAxis(180, Vector3.forward); break;
             case Rotation.WEST: to = rotationOffset * Quaternion.AngleAxis(90, Vector3.forward); break;
-            case Rotation.ASKEW: to = rotationOffset * Quaternion.AngleAxis(90, Vector3.up); break;
             default: break;
         }
 
@@ -115,7 +114,6 @@ public class TileObject : MonoBehaviour
             case Rotation.EAST: to = rotationOffset * Quaternion.AngleAxis(270, Vector3.forward); break;
             case Rotation.SOUTH: to = rotationOffset * Quaternion.AngleAxis(180, Vector3.forward); break;
             case Rotation.WEST: to = rotationOffset * Quaternion.AngleAxis(90, Vector3.forward); break;
-            case Rotation.ASKEW: to = rotationOffset * Quaternion.AngleAxis(90, Vector3.up); break;
             default: break;
         }
 

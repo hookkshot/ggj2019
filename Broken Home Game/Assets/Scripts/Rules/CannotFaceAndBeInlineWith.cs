@@ -31,22 +31,12 @@ public class CannotFaceAndBeInlineWith : FurnitureRule
 
     public bool IsFacingObject(Furniture target, Furniture furniture)
     {
-        if(target.TileObject.Cell.x != furniture.TileObject.Cell.x && target.TileObject.Cell.y != furniture.TileObject.Cell.y)
-        {
-            return false;
-        }
-
         if (target.TileObject.GetRotation() == furniture.TileObject.GetRotation())
         {
             return false;
         }
 
-        if(target.TileObject.GetRotation() == Rotation.ASKEW || furniture.TileObject.GetRotation() == Rotation.ASKEW)
-        {
-            return false;
-        }
-
-        if (target.TileObject.Cell.x == furniture.TileObject.Cell.x)
+        if (target.TileObject.Cell.x == furniture.TileObject.Cell.x || target.TileObject.Cell.y == furniture.TileObject.Cell.y)
         {
             int oppositeDirection = ((int)target.TileObject.GetRotation() + 2) % 4;
             if (oppositeDirection == (int)furniture.TileObject.GetRotation())

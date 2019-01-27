@@ -29,19 +29,19 @@ public class MustHaveAtLeastNumberOfObjects : FurnitureRule
                 switch (_distanceCheckType)
                 {
                     case CheckType.NotEquals:
-                        failed = distance != _distanceInGridSpaces;
+                        failed = !(distance != _distanceInGridSpaces);
                         break;
 
                     case CheckType.LessThan:
-                        failed = distance < _distanceInGridSpaces;
+                        failed = !(distance < _distanceInGridSpaces);
                         break;
 
                     case CheckType.GreaterThan:
-                        failed = distance > _distanceInGridSpaces;
+                        failed = !(distance > _distanceInGridSpaces);
                         break;
 
                     case CheckType.Equals:
-                        failed = distance == _distanceInGridSpaces;
+                        failed = !(distance == _distanceInGridSpaces);
                         break;
                 }
 

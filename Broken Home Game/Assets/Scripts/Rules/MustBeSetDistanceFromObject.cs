@@ -5,7 +5,7 @@ using UnityEngine;
 public class MustBeSetDistanceFromObject : FurnitureRule
 {
     [SerializeField] string _affectedTag = null;
-    [SerializeField] float _distanceInGridSpaces = 3f;
+    [SerializeField] int _distanceInGridSpaces = 3;
 
     public override bool Passes(Furniture checkingObject)
     {
@@ -23,7 +23,7 @@ public class MustBeSetDistanceFromObject : FurnitureRule
                 Vector2Int a = furniture.TileObject.Cell;
                 Vector2Int b = checkingObject.TileObject.Cell;
 
-                if (Vector2Int.Distance(a, b) > _distanceInGridSpaces)
+                if (Mathf.CeilToInt(Vector2Int.Distance(a, b)) != _distanceInGridSpaces)
                 {
                     return false;
                 }

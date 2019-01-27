@@ -2418,7 +2418,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Use Space,X to interact
+  m_text: 'Use Space,Z to interact
 
     Arrow Keys to move'
   m_isRightToLeft: 0

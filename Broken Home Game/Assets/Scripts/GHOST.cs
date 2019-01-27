@@ -24,9 +24,7 @@ public class GHOST : MonoBehaviour
         }
 
         var zone = badZones[Random.Range(0, badZones.Count)];
-
-        var furniture = zone.GetComponentsInChildren<InteractableFurniture>();
-        var badFurniture = furniture.Where(f => !f.HasFengShui()).ToList();
+        var badFurniture = zone.Furniture.Where(f => f is InteractableFurniture).Where(f => !f.HasFengShui()).Select(f => f as InteractableFurniture).ToList();
 
         if (badFurniture.Count <= 0)
         {

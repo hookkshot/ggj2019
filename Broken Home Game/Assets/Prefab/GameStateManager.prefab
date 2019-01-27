@@ -523,8 +523,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 8300000, guid: c9883c1ebf8ac4bdab6f329b9ca13625, type: 3}
   menuSounds: []
-  goodSounds: []
-  badSounds: []
+  goodSounds:
+  - {fileID: 8300000, guid: 6cbb2ad3f5256584cbb4a35f69959849, type: 3}
+  - {fileID: 8300000, guid: f4ca3946381417a4698cbac643e7cf13, type: 3}
+  - {fileID: 8300000, guid: f9822900f2a9cf34ab7160c6cb4af1fb, type: 3}
+  - {fileID: 8300000, guid: 6b0659118327f2a41b9f05ddbc23db0e, type: 3}
+  badSounds:
+  - {fileID: 8300000, guid: 52835f86f533a65409adce1120e2a356, type: 3}
+  - {fileID: 8300000, guid: 6889050e0ba70e246a7fc193c663e4c4, type: 3}
+  - {fileID: 8300000, guid: e062585f218351842a050d61ce9bdd1f, type: 3}
+  - {fileID: 8300000, guid: bb670dc3450178e41ac1ab992cb2aea1, type: 3}
+  - {fileID: 8300000, guid: 7cf229f61e42b6a42816db2887fa2a01, type: 3}
+  - {fileID: 8300000, guid: 960007fa673bbe64fa3f6ffb8a4dca3b, type: 3}
 --- !u!1001 &2186563925634340057
 PrefabInstance:
   m_ObjectHideFlags: 0

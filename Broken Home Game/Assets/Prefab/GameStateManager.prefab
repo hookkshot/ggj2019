@@ -266,7 +266,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34.05
+  m_fontSize: 26.15
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -697,7 +697,8 @@ MonoBehaviour:
   - {fileID: 3212104477784631026, guid: b41a28fabf2c798429b4c3e071940a1c, type: 3}
   GameUi: {fileID: 1325234426}
   roomText: {fileID: 1582779106}
-  effects: []
+  effects:
+  - {fileID: 8997550273455046581, guid: a57f358fff5cf934a87123499bbedb05, type: 3}
 --- !u!114 &5090903773841607154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
                 tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
             }
 
-            var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
+            var cellPoint = tileObject.Cell.Step(tileObject.GetRotation());
             var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y, 0));
 
             foreach (GameObject o in inventory.Inventory)
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     private void Interact()
     {
-        var cellPoint = tileObject.GetCell().Step(tileObject.GetRotation());
+        var cellPoint = tileObject.Cell.Step(tileObject.GetRotation());
         var worldPoint = tilemap.GetCellCenterWorld(new Vector3Int(cellPoint.x, cellPoint.y, 0));
         var inventory = GetComponent<PlayerInventory>();
 

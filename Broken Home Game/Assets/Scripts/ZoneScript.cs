@@ -3,25 +3,26 @@ using UnityEngine;
 
 public class ZoneScript : MonoBehaviour
 {
-    List<Furniture> furniture;
-    public List<Furniture> Furniture { get { return furniture; } }
+    public List<Furniture> Furniture { get; private set; }
     public bool HasFengShui { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        furniture = new List<Furniture>(GetComponentsInChildren<Furniture>());
+        Furniture = new List<Furniture>(GetComponentsInChildren<Furniture>());
 
-        foreach (var f in furniture)
+        foreach (var f in Furniture)
         {
             f.Zone = this;
         }
+
+        OnUpdateLayout();
     }
 
     public void OnUpdateLayout() {
         HasFengShui = true;
 
-        foreach (var script in furniture)
+        foreach (var script in Furniture)
         {
             script.UpdateFengShui();
             HasFengShui &= script.HasFengShui();
@@ -33,15 +34,15 @@ public class ZoneScript : MonoBehaviour
 
     public void RemoveFurniture(Furniture f)
     {
-        furniture.Remove(f);
+        Furniture.Remove(f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (furniture == null) return;
+        if (Furniture == null) return;
         var f = collision.gameObject.GetComponent<Furniture>();
-        if (f && !furniture.Contains(f)) {
-            furniture.Add(f);
+        if (f && !Furniture.Contains(f)) {
+            Furniture.Add(f);
             f.Zone = this;
         }
 
@@ -51,7 +52,7 @@ public class ZoneScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         var f = collision.gameObject.GetComponent<Furniture>();
-        furniture.Remove(f);
+        Furniture.Remove(f);
 
         OnUpdateLayout();
     }

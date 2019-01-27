@@ -86,7 +86,7 @@ public class Room : MonoBehaviour
                 var furnitureState = new FurnitureState();
 
                 furnitureState.Rotation = furniture.TileObject.GetRotation();
-                furnitureState.Cell = furniture.TileObject.GetCell();
+                furnitureState.Cell = furniture.TileObject.Cell;
                 furnitureState.Name = furniture.TypeName;
 
                 state.Furnitures.Add(furnitureState);

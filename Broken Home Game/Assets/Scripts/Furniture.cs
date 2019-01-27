@@ -21,6 +21,10 @@ public class Furniture : MonoBehaviour
     private void Awake()
     {
         TileObject = GetComponent<TileObject>();
+    }
+
+    private void Start()
+    {
         if (snapToGrid)
         {
             Tilemap tilemap = FindObjectOfType<Tilemap>();
@@ -57,5 +61,10 @@ public class Furniture : MonoBehaviour
     public void UpdateFengShui()
     {
         hasFengShui = rules.All(f => f.Passes(this));
+    }
+
+    public bool HasAnyTags(string[] tags)
+    {
+        return FurnitureTags.Intersect(tags).Any();
     }
 }

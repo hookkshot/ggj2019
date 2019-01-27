@@ -10,7 +10,7 @@ public class TileObject : MonoBehaviour
     [SerializeField]
     Rotation rotation = Rotation.NORTH;
 
-    public Vector2Int GetCell() { return cell; }
+    public Vector2Int Cell { get { return cell; } }
     public Rotation GetRotation() { return rotation; }
 
     private bool isMoving = false;
@@ -21,7 +21,7 @@ public class TileObject : MonoBehaviour
         if (isMoving || isRotating) return;
         var newPosition = tilemap.GetCellCenterWorld(new Vector3Int(newCell.x, newCell.y, -1));
         if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y), ~LayerMask.GetMask("Zone"))) { return; }
-        if(!tilemap.GetTile(new Vector3Int(newCell.x, newCell.y, 0))) { return; }
+        if (!tilemap.GetTile(new Vector3Int(newCell.x, newCell.y, 0))) { return; }
 
         transform.position = newPosition;
         cell = newCell;
@@ -68,14 +68,14 @@ public class TileObject : MonoBehaviour
 
     public void Step(Tilemap tilemap, Rotation direction)
     {
-        
+
         MoveToCellTween(tilemap, cell.Step(direction));
     }
 
     public void Face(Rotation newRotation)
     {
         if (isMoving || isRotating) return;
-        
+
         StartCoroutine(FaceI(newRotation));
     }
 

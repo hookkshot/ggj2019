@@ -10,18 +10,8 @@ public class MustBeSetDistanceFromObject : FurnitureRule
 
     public override bool Passes(Furniture checkingObject)
     {
-        Collider[] colliders = Physics.OverlapSphere(checkingObject.transform.position, _distanceToCheck, _checkLayers.value);
-        for (int i = 0; i < colliders.Length; i++)
-        {
-            if (colliders[i].GetInstanceID() != checkingObject.GetComponentInChildren<Collider>().GetInstanceID())
-            {
-                if (colliders[i].transform.root.GetComponentInChildren<Furniture>().FurnitureTags.Intersect(checkingObject.FurnitureTags).Any())
-                {
-                    return false;
-                }
-            }
-        }
+// redo required
 
-        return true;
+        return false;
     }
 }

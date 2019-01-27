@@ -87,8 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rules:
-  - {fileID: 11400000, guid: 67eb6cecfa9d9ce4ab4f93de9753766f, type: 2}
-  - {fileID: 11400000, guid: 864e4ec201b865643ba6b00e2b6fc802, type: 2}
+  - {fileID: 11400000, guid: 2ec9ff28c526b9940a2d9b931d664ec3, type: 2}
   tags:
   - Mirror
   snapToGrid: 1

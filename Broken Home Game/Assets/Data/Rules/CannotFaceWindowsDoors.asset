@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c764f7a4e6afa1b41bdb4a415d64ed55, type: 3}
-  m_Name: Cannot Face Windows
+  m_Script: {fileID: 11500000, guid: 153cecc85535fe748bbc9e9d9474e019, type: 3}
+  m_Name: CannotFaceWindowsDoors
   m_EditorClassIdentifier: 
-  _checkLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  _affectedTags:
+  tagsToCheck:
   - Window
+  - Door

@@ -23,23 +23,23 @@ public class Room : MonoBehaviour
         zones = GetComponentsInChildren<ZoneScript>();
     }
 
-    private float ghostTimer = 0;
+    //private float ghostTimer = 0;
 
-    private void Update()
-    {
-        ghostTimer += Time.deltaTime;
+    //private void Update()
+    //{
+    //    ghostTimer += Time.deltaTime;
 
-        if (ghostTimer > 15f)
-        {
-            var furnitures = FindObjectsOfType<InteractableFurniture>().Where(f => !f.HasFengShui());
-            if(furnitures.Count() >0)
-            {
-                var f = furnitures.ToList()[Random.Range(0, furnitures.Count())];
-                f.Wobble();
-            }
-            ghostTimer = 0;
-        }
-    }
+    //    if (ghostTimer > 15f)
+    //    {
+    //        var furnitures = FindObjectsOfType<InteractableFurniture>().Where(f => !f.HasFengShui());
+    //        if(furnitures.Count() >0)
+    //        {
+    //            var f = furnitures.ToList()[Random.Range(0, furnitures.Count())];
+    //            f.Wobble();
+    //        }
+    //        ghostTimer = 0;
+    //    }
+    //}
 
     public void Setup(PlayerController playerController, RoomState state)
     {

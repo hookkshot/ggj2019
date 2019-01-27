@@ -4,8 +4,7 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(TileObject), typeof(PlayerInventory))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private Tilemap tilemap;
+    [SerializeField] Tilemap tilemap;
 
     private BoundsInt currentBounds;
     private TileObject tileObject;
@@ -56,6 +55,10 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
+            }
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
             }
 
             var cellPoint = tileObject.Cell.Step(tileObject.GetRotation());

@@ -10,12 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa36afe353420c14d9aa5741fd163b67, type: 3}
-  m_Name: Must Be Set Distance From Fridges and Ovens
+  m_Name: MustBe3SpacesFromOven
   m_EditorClassIdentifier: 
-  _affectedTags:
-  - Fridge
-  - Oven
-  _distanceToCheck: 3
-  _checkLayers:
-    serializedVersion: 2
-    m_Bits: 256
+  _affectedTag: Oven
+  _distanceInGridSpaces: 3

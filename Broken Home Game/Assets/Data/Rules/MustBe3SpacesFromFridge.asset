@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 153cecc85535fe748bbc9e9d9474e019, type: 3}
-  m_Name: CannotFaceWindowsDoors
+  m_Script: {fileID: 11500000, guid: fa36afe353420c14d9aa5741fd163b67, type: 3}
+  m_Name: MustBe3SpacesFromFridge
   m_EditorClassIdentifier: 
-  tagsToCheck:
-  - Window
-  - Doorway
+  _affectedTag: Fridge
+  _distanceInGridSpaces: 3

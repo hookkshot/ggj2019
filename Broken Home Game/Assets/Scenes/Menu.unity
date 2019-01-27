@@ -973,11 +973,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 3975710692846435995, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8654455102522222372, guid: 40d46caa7135a9249a401b22d56e812a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1091,11 +1086,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2273422166516035807, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_Transition
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 630789095599609629, guid: 40d46caa7135a9249a401b22d56e812a,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -1115,37 +1105,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1878407813}
-    - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: Screen, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument

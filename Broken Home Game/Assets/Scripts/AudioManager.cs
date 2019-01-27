@@ -38,19 +38,19 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic()
     {
-        EazySoundManager.PlayMusic(music, 0.7f, true, true);
+        EazySoundManager.PlayMusic(music, 0.5f, true, true);
     }
 
     public void PlayGoodSound()
     {
-        var sound = goodSounds[Random.Range(0, menuSounds.Length)];
-        EazySoundManager.PlaySound(sound);
+        var sound = goodSounds[Random.Range(0, goodSounds.Length)];
+        EazySoundManager.PlaySound(sound, 2.5f);
     }
 
     public void PlayBadSound()
     {
-        var sound = badSounds[Random.Range(0, menuSounds.Length)];
-        EazySoundManager.PlaySound(sound);
+        var sound = badSounds[Random.Range(0, badSounds.Length)];
+        EazySoundManager.PlaySound(sound, 2.5f);
     }
 
     public void PlayMenuSound()

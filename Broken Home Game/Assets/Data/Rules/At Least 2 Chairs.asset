@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: NextTo2Chairs
+  m_Name: At Least 2 Chairs
   m_EditorClassIdentifier: Assembly-CSharp::MustHaveAtLeastNumberOfObjects
   _affectedTag: Chair
   _distanceInGridSpaces: 1
   _numberOfObjects: 2
-  _distanceCheckType: 2
+  _distanceCheckType: 0

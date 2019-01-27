@@ -90,6 +90,7 @@ MonoBehaviour:
   rules:
   - {fileID: 11400000, guid: 47aa28d895edd8d4284e49768de2ee74, type: 2}
   - {fileID: 11400000, guid: 78e6f48c479948141843517507c9558d, type: 2}
+  - {fileID: 11400000, guid: a0dc6ae809d6dcd48909443c765b6d65, type: 2}
   tags:
   - Table
   snapToGrid: 1

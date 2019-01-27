@@ -5,7 +5,6 @@ using UnityEngine;
 public class MustFaceDifferentDirectionToObject : FurnitureRule
 {
     [SerializeField] string[] _affectedTags = null;
-    [SerializeField] LayerMask _checkLayers;
 
     public override bool Passes(Furniture checkingObject)
     {

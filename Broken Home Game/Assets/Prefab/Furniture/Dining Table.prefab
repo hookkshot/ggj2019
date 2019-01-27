@@ -88,7 +88,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rules:
-  - {fileID: 11400000, guid: 7c2788bf0718a904a85b66524e2b2d35, type: 2}
   - {fileID: 11400000, guid: 47aa28d895edd8d4284e49768de2ee74, type: 2}
   - {fileID: 11400000, guid: 78e6f48c479948141843517507c9558d, type: 2}
   tags:

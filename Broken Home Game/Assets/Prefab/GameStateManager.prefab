@@ -266,7 +266,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.75
+  m_fontSize: 26.15
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -581,6 +581,39 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  GrainCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9934229
+      outSlope: 1.9934229
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: -0.003329374
+      outSlope: -0.003329374
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.16198325
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.0133736
+      outSlope: -2.0133736
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.99697113
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   gameLevels:
   - Lounge
   - Kitchen
@@ -595,7 +628,8 @@ MonoBehaviour:
   - {fileID: 3212104477784631026, guid: b41a28fabf2c798429b4c3e071940a1c, type: 3}
   GameUi: {fileID: 1325234426}
   roomText: {fileID: 1582779106}
-  effects: []
+  effects:
+  - {fileID: 8997550273455046581, guid: a57f358fff5cf934a87123499bbedb05, type: 3}
 --- !u!114 &5090903773841607154
 MonoBehaviour:
   m_ObjectHideFlags: 0

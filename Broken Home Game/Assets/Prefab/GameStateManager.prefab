@@ -698,6 +698,7 @@ MonoBehaviour:
   - {fileID: 3212104477784631026, guid: d3244c2a5992c2b4bbb02125154678e9, type: 3}
   - {fileID: 7927960967899577183, guid: 53d55ae754e103f4cbd0105265447a2b, type: 3}
   - {fileID: 3212104477784631026, guid: 1562e486eb3aead4284b1f1627502696, type: 3}
+  - {fileID: 3212104477784631026, guid: b41a28fabf2c798429b4c3e071940a1c, type: 3}
   GameUi: {fileID: 1325234426}
   roomText: {fileID: 1582779106}
   effects:

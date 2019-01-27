@@ -221,7 +221,8 @@ namespace Hellmade.Sound
                 if (!audio.Persist && audio.Activated)
                 {
                     Destroy(audio.AudioSource);
-                    audioDict.Remove(key);
+                    if(audioDict.ContainsKey(key))
+                        audioDict.Remove(key);
                 }
             }
 
@@ -232,7 +233,8 @@ namespace Hellmade.Sound
                 Audio audio = audioDict[key];
                 if (!audio.Persist && audio.Activated)
                 {
-                    audioPool.Remove(key);
+                    if (audioPool.ContainsKey(key))
+                        audioPool.Remove(key);
                 }
             }
         }

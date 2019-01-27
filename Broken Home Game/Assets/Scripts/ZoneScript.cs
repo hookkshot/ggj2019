@@ -8,6 +8,9 @@ public class ZoneScript : MonoBehaviour
 
     public void OnUpdateLayout()
     {
+        var room = GetComponentInParent<Room>();
+        if (!room) { return; }
+
         HasFengShui = true;
 
         foreach (var script in Furniture)
@@ -16,7 +19,7 @@ public class ZoneScript : MonoBehaviour
             HasFengShui &= script.HasFengShui();
         }
 
-        var room = GetComponentInParent<Room>();
+        
         room.OnZoneUpdate();
     }
 

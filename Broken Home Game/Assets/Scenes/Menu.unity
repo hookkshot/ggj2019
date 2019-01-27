@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 257566572}
   - component: {fileID: 257566571}
   - component: {fileID: 257566570}
+  - component: {fileID: 257566573}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -567,7 +568,7 @@ Camera:
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -585,6 +586,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257566573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257566569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 257566572}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &565286570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1167,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2273422166516035807, guid: 40d46caa7135a9249a401b22d56e812a,
+        type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6150867835765585842, guid: 40d46caa7135a9249a401b22d56e812a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1530,47 +1596,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914728145}
   m_CullTransparentMesh: 0
---- !u!1 &980702191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 962793089, guid: 9e9e2635fbe80b14aab06395f6180e81,
-    type: 3}
-  m_PrefabInstance: {fileID: 2186563926400445313}
-  m_PrefabAsset: {fileID: 0}
---- !u!222 &980702193
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980702191}
-  m_CullTransparentMesh: 0
---- !u!114 &980702194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980702191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 8400000, guid: 4389c4f53c3492a448b66e0797d2deca, type: 2}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!1 &989252636
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,101 +3220,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[1].inSlope
-      value: 0.10439563
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[1].outSlope
-      value: 0.10439563
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[1].inWeight
-      value: 0.07740273
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[0].value
-      value: 0.0019683838
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[1].value
-      value: 1.1614299
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[2].value
-      value: 0.99158955
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[2].time
-      value: 0.90098757
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[2].inSlope
-      value: -0.9158077
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[2].outSlope
-      value: -0.9158077
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[2].outWeight
-      value: 0.4711516
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[3].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[3].value
-      value: 1.0019684
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[3].inSlope
-      value: 0.24678735
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[3].outSlope
-      value: 0.24678735
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[3].inWeight
-      value: 0.4996408
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[1].time
-      value: 0.7784011
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166316193281967412, guid: 9e9e2635fbe80b14aab06395f6180e81,
-        type: 3}
-      propertyPath: OverCurve.m_Curve.Array.data[1].outWeight
-      value: 0.46153277
       objectReference: {fileID: 0}
     - target: {fileID: 1582779106, guid: 9e9e2635fbe80b14aab06395f6180e81, type: 3}
       propertyPath: m_havePropertiesChanged

@@ -5,16 +5,16 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(SetSortingLayer))]
 public class TileObject : MonoBehaviour
 {
-    Vector2Int cell;
-
-    [SerializeField]
-    Rotation rotation = Rotation.NORTH;
+    [SerializeField] Rotation rotation = Rotation.NORTH;
+    [SerializeField] Animator _animator = null;
 
     public Vector2Int Cell { get { return cell; } }
     public Rotation GetRotation() { return rotation; }
 
     private bool isMoving = false;
     private bool isRotating = false;
+
+    Vector2Int cell;
 
     public bool IsTweening()
     {
@@ -26,6 +26,18 @@ public class TileObject : MonoBehaviour
         if (isMoving || isRotating) return;
         var newPosition = tilemap.GetCellCenterWorld(new Vector3Int(newCell.x, newCell.y, -1));
         if (Physics2D.OverlapPoint(new Vector2(newPosition.x, newPosition.y), ~LayerMask.GetMask("Zone"))) { return; }
+        if (!tilemap.GetTile(new Vector3Int(newCell.x, newCell.y, 0))) { return; }
+
+        transform.position = newPosition;
+        cell = newCell;
+
+        ZOrdering.SetZOrdering(transform);
+    }
+
+    public void MoveToCellNoCollisions(Tilemap tilemap, Vector2Int newCell)
+    {
+        if (isMoving || isRotating) return;
+        var newPosition = tilemap.GetCellCenterWorld(new Vector3Int(newCell.x, newCell.y, -1));
         if (!tilemap.GetTile(new Vector3Int(newCell.x, newCell.y, 0))) { return; }
 
         transform.position = newPosition;
@@ -46,6 +58,11 @@ public class TileObject : MonoBehaviour
 
     public IEnumerator MoveToPositionI(Vector3 position, Vector2Int newCell)
     {
+        if(_animator != null)
+        {
+            _animator.SetBool("IsWalking", true);
+        }
+
         isMoving = true;
         var from = transform.position;
 
@@ -64,6 +81,11 @@ public class TileObject : MonoBehaviour
         cell = newCell;
         ZOrdering.SetZOrdering(transform);
         isMoving = false;
+
+        if (_animator != null)
+        {
+            _animator.SetBool("IsWalking", false);
+        }
     }
 
     public void SetCell(Tilemap tilemap)

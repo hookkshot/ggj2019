@@ -17,6 +17,9 @@ public class GameStateManager : MonoBehaviour
     public AnimationCurve WobbleCurve;
     public AnimationCurve OverCurve;
 
+    public AnimationCurve GrainCurve;
+    public AnimationCurve BloomCurve;
+
     [SerializeField]
     private string[] gameLevels;
 

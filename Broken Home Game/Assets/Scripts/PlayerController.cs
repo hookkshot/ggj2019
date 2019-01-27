@@ -4,8 +4,7 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(TileObject), typeof(PlayerInventory))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private Tilemap tilemap;
+    [SerializeField] Tilemap tilemap;
 
     private BoundsInt currentBounds;
     private TileObject tileObject;
@@ -17,7 +16,7 @@ public class PlayerController : MonoBehaviour
         tileObject.FaceSnap(rotation);
 
         var cell = tilemap.SnapToClosestCell(transform);
-        tileObject.MoveToCell(tilemap, new Vector2Int(cell.x, cell.y).Step(rotation));
+        tileObject.MoveToCellNoCollisions(tilemap, new Vector2Int(cell.x, cell.y).Step(rotation));
     }
 
     // Update is called once per frame
@@ -41,11 +40,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 tileObject.RotateRight();
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
                 tileObject.RotateLeft();
             }
@@ -56,6 +55,10 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 tileObject.Step(tilemap, tileObject.GetRotation().RotateLeft().RotateLeft());
+            }
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
             }
 
             var cellPoint = tileObject.Cell.Step(tileObject.GetRotation());
@@ -100,7 +103,7 @@ public class PlayerController : MonoBehaviour
         if (!collider) { return; }
 
         var door = collider.GetComponent<LevelDoor>();
-        if (door)
+        if (door && inventory.IsInventoryEmpty())
         {
             GameStateManager.Instance.MoveToLevel(door.SceneConnection, door.DoorConnection);
         }

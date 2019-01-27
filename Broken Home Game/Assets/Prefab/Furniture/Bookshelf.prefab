@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3212104477784631016}
   m_LocalRotation: {x: 0.46193978, y: -0.19134171, z: 0.33141357, w: 0.8001032}
-  m_LocalPosition: {x: 2.984, y: -1.057, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3029901960234830839}
@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 0
+  _animator: {fileID: 0}
 --- !u!114 &3212104477784631026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,20 +120,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3212104477784631017}
     m_Modifications:
-    - target: {fileID: 143341895261408550, guid: ade2299c43212184bbb34e1a4c15ff79,
-        type: 3}
-      propertyPath: m_Name
-      value: BookShelf
-      objectReference: {fileID: 0}
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
@@ -152,12 +148,12 @@ PrefabInstance:
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
@@ -177,12 +173,17 @@ PrefabInstance:
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6042918794045300860, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 143341895261408550, guid: ade2299c43212184bbb34e1a4c15ff79,
+        type: 3}
+      propertyPath: m_Name
+      value: BookShelf
       objectReference: {fileID: 0}
     - target: {fileID: 3929702622327924156, guid: ade2299c43212184bbb34e1a4c15ff79,
         type: 3}

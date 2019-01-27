@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: MustBeAtLeast4SpacesFromLightsource
-  m_EditorClassIdentifier: Assembly-CSharp::MustBeSetDistanceFromObject
-  _affectedTag: Lightsource
-  _distanceInGridSpaces: 5
-  _checkType: 3
+  m_Name: NextTo2Chairs
+  m_EditorClassIdentifier: Assembly-CSharp::MustHaveAtLeastNumberOfObjects
+  _affectedTag: Chair
+  _distanceInGridSpaces: 1
+  _numberOfObjects: 2
+  _distanceCheckType: 2

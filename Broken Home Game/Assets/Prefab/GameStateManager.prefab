@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 962793090}
+  - component: {fileID: 980702193}
+  - component: {fileID: 980702194}
   m_Layer: 0
   m_Name: Items
   m_TagString: Untagged
@@ -35,6 +37,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
+--- !u!222 &980702193
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962793089}
+  m_CullTransparentMesh: 0
+--- !u!114 &980702194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962793089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 8400000, guid: 4389c4f53c3492a448b66e0797d2deca, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1325234426
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +333,54 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7540030412006034528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1256510957562592229}
+  - component: {fileID: 8448027588663336606}
+  m_Layer: 9
+  m_Name: PostProcessing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1256510957562592229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7540030412006034528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3644862079774844196}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8448027588663336606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7540030412006034528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 8c97fdfde18adae48938642b34c2a565, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &7702040243186820173
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +412,7 @@ Transform:
   m_Children:
   - {fileID: 1060987325124972997}
   - {fileID: 1325234427}
+  - {fileID: 1256510957562592229}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -495,6 +581,108 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  GrainCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9934229
+      outSlope: 1.9934229
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.20719637
+      value: 0.7654722
+      inSlope: 2.4566786
+      outSlope: 2.4566786
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: -0.003329374
+      outSlope: -0.003329374
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.16198325
+    - serializedVersion: 3
+      time: 0.7741838
+      value: 0.78565836
+      inSlope: -2.3928914
+      outSlope: -2.3928914
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.0133736
+      outSlope: -2.0133736
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.99697113
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  BloomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.75
+      inSlope: 0.6186533
+      outSlope: 0.6186533
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.2079241
+    - serializedVersion: 3
+      time: 0.20039365
+      value: 0.8169455
+      inSlope: 0.6394759
+      outSlope: 1.9044603
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.20649381
+      outWeight: 0.086965986
+    - serializedVersion: 3
+      time: 0.5
+      value: 2.3
+      inSlope: -0.003329374
+      outSlope: -0.003329374
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.16198325
+    - serializedVersion: 3
+      time: 0.78184104
+      value: 0.8187484
+      inSlope: -1.9898769
+      outSlope: -1.0281757
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.10694092
+      outWeight: 0.22348137
+    - serializedVersion: 3
+      time: 1
+      value: 0.75
+      inSlope: -0.40880236
+      outSlope: -0.40880236
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.19957836
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   gameLevels:
   - Lounge
   - Kitchen
@@ -506,9 +694,11 @@ MonoBehaviour:
   - {fileID: 7927960967899577183, guid: f09f3c4607a0d1b4c870fc06cb21887b, type: 3}
   - {fileID: 3212104477784631026, guid: 6467e4b71dd5a7c498157f256d2ca145, type: 3}
   - {fileID: 7927960967899577183, guid: 1f0a85608d3351e44870c9778e2f3ae3, type: 3}
+  - {fileID: 3212104477784631026, guid: b41a28fabf2c798429b4c3e071940a1c, type: 3}
   GameUi: {fileID: 1325234426}
   roomText: {fileID: 1582779106}
-  effects: []
+  effects:
+  - {fileID: 8997550273455046581, guid: a57f358fff5cf934a87123499bbedb05, type: 3}
 --- !u!114 &5090903773841607154
 MonoBehaviour:
   m_ObjectHideFlags: 0

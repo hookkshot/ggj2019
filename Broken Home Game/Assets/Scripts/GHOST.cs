@@ -1,14 +1,25 @@
 ﻿using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GHOST : MonoBehaviour
 {
     const float GHOST_MIN_TIME = 5;
     const float GHOST_MAX_TIME = 15;
 
+    [SerializeField] PostProcessVolume _postProcessingProfile = null;
+    [SerializeField] Color startBloomColor = Color.white;
+    [SerializeField] Color endBloomColor = new Color(0f, 0.5f, 0f);
+
+    Grain grain = null;
+    Bloom bloom = null;
+
     private void Start()
     {
+        _postProcessingProfile = FindObjectOfType<PostProcessVolume>();
+        grain = _postProcessingProfile.profile.GetSetting<Grain>();
+        bloom = _postProcessingProfile.profile.GetSetting<Bloom>();
         StartCoroutine(GhostTimer());
     }
 
@@ -24,9 +35,7 @@ public class GHOST : MonoBehaviour
         }
 
         var zone = badZones[Random.Range(0, badZones.Count)];
-
-        var furniture = zone.GetComponentsInChildren<InteractableFurniture>();
-        var badFurniture = furniture.Where(f => !f.HasFengShui()).ToList();
+        var badFurniture = zone.Furniture.Where(f => f is InteractableFurniture).Where(f => !f.HasFengShui()).Select(f => f as InteractableFurniture).ToList();
 
         if (badFurniture.Count <= 0)
         {
@@ -37,7 +46,25 @@ public class GHOST : MonoBehaviour
         var target = badFurniture[Random.Range(0, badFurniture.Count)];
 
         target.Wobble();
+        StartCoroutine(FuckWithPlayerScreen());
         AudioManager.Instance.PlayBadSound();
+    }
+
+    IEnumerator FuckWithPlayerScreen()
+    {
+        float time = 0;
+
+        while (time < 1f)
+        {
+            yield return 0;
+            time += Time.deltaTime;
+
+            var d = time / 1f;
+
+            grain.intensity.value = GameStateManager.Instance.GrainCurve.Evaluate(d);
+            bloom.intensity.value = GameStateManager.Instance.BloomCurve.Evaluate(d);
+            bloom.color.value = Color.Lerp(startBloomColor, endBloomColor, d);
+        }
     }
 
     IEnumerator GhostTimer()

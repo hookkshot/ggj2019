@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private Screen[] screens;
 
-    // Update is called once per frame
-    void Update()
+    public void SwitchScreen(Screen screen)
     {
-        
+        foreach (var item in screens)
+        {
+            item.gameObject.SetActive(false);
+        }
+
+        screen.gameObject.SetActive(true);
     }
 }

@@ -58,6 +58,11 @@ public class GameStateManager : MonoBehaviour
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
     }
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayMusic();
+    }
+
     public Furniture GetFurniture(string name)
     {
         return FurniturePrefabs.FirstOrDefault(f => f.TypeName == name);

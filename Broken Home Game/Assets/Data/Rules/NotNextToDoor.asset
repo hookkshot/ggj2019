@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa36afe353420c14d9aa5741fd163b67, type: 3}
   m_Name: NotNextToDoor
   m_EditorClassIdentifier: 
-  _affectedTag: Door
+  _affectedTag: Doorway
   _distanceInGridSpaces: 1
   _checkType: 0

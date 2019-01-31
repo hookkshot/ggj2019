@@ -15,6 +15,8 @@ public class GHOST : MonoBehaviour
     Grain grain = null;
     Bloom bloom = null;
 
+    public bool IsPaused = false;
+
     private void Start()
     {
         _postProcessingProfile = FindObjectOfType<PostProcessVolume>();
@@ -75,6 +77,8 @@ public class GHOST : MonoBehaviour
         var ghostoclock = Random.Range(GHOST_MIN_TIME, GHOST_MAX_TIME);
         yield return new WaitForSeconds(ghostoclock);
 
+        if (IsPaused)
+            yield break;
         FuckWithFurniture();
 
         StartCoroutine(GhostTimer());

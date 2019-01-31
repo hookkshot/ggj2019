@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -47,7 +48,9 @@ public class GameStateManager : MonoBehaviour
     private bool sceneHasLoaded;
 
     private Room currentRoom;
+    private GHOST currentGhost;
     private PlayerController playerController;
+    private TutorialManager tutorialManager;
 
     private void Awake()
     {
@@ -58,12 +61,28 @@ public class GameStateManager : MonoBehaviour
         gameState = new GameState();
         GameUi.SetActive(false);
 
+        
+
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
     }
 
     private void Start()
     {
         AudioManager.Instance.PlayMusic();
+
+        tutorialManager = GameUi.GetComponent<TutorialManager>();
+        if (tutorialManager)
+        {
+            tutorialManager.LessonActivated.AddListener(OnLessonActivated);
+            tutorialManager.LessonDismissed.AddListener(OnLessonDismissed);
+        }
+    }
+
+    private void Update()
+    {
+#if UNITY_EDITOR
+        DebugRun();
+#endif
     }
 
     public Furniture GetFurniture(string name)
@@ -138,6 +157,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         currentRoom = FindObjectOfType<Room>();
+        currentGhost = FindObjectOfType<GHOST>();
         //Update UI
         roomText.text = currentRoom.SceneName;
 
@@ -155,7 +175,38 @@ public class GameStateManager : MonoBehaviour
         {
             gameState.Rooms.Add(currentRoom.SceneName, new RoomState());
         }
+
+        if(tutorialManager)
+        {
+            tutorialManager.LevelLoaded(currentRoom.SceneName);
+        }
     }
+
+    private void OnLessonActivated()
+    {
+        playerController.IsPaused = true;
+        if (currentGhost)
+            currentGhost.IsPaused = true;
+    }
+
+    private void OnLessonDismissed()
+    {
+        playerController.IsPaused = false;
+        if (currentGhost)
+            currentGhost.IsPaused = false;
+    }
+
+#if UNITY_EDITOR
+    private void DebugRun()
+    {
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            string path = System.IO.Path.Combine(Application.persistentDataPath, "Screenshot" + DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + ".png");
+            Debug.Log(path);
+            ScreenCapture.CaptureScreenshot(path);
+        }
+    }
+#endif
 }
 
 

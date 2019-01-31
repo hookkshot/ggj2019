@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private BoundsInt currentBounds;
     private TileObject tileObject;
 
+    public bool IsPaused = false;
+
     public void Setup(Tilemap tilemap, Rotation rotation)
     {
         this.tilemap = tilemap;
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (IsPaused) return;
+
         var inventory = GetComponent<PlayerInventory>();
         var handItem = inventory.HandItem();
 
@@ -113,4 +117,6 @@ public class PlayerController : MonoBehaviour
             furniture.Pickup(inventory);
         }
     }
+
+
 }
